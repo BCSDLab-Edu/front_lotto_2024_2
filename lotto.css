@@ -8,6 +8,8 @@ html, body {
     display: flex;
     align-items: center;
     flex-direction: column;
+    font-weight: 400;
+    font-family: Roboto;
 }
 
 header{
@@ -43,18 +45,139 @@ footer{
 
 footer p{
     color:#4E5BA6;
+    
 }
+
+button{
+    background: #4E5BA6;
+    color: white;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+
 
 .maincontents{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    border: 1px solid;
     width: 414px;
     height: 727px;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    border: 1px solid #0000001F
 }
 
-.maincontents .title{
+.title{
     font-size: 24px;
+    margin: 20px;
+    width: 382px;
+    height: 24px;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: center;
 }
+
+.input{
+    width: 382px;
+    height: 64px;
+    margin-top: 20px;
+}
+
+.input input{
+    height: 36px;
+    width: 310px;
+    font-size: 15px;
+    font-weight: 400;
+    opacity: 0px;
+
+}
+
+.input button{
+    width: 56px;
+    height: 36px;
+}
+
+.lottos{
+    width: 382px;
+    margin-top: 20px;
+    height: 276px;
+}
+
+.lottos div{
+    margin-top: 8px;
+}
+
+.winninglotto{
+    position: relative;
+    width: 382px;
+    margin-top: 20px;
+}
+
+.winninglotto > div input{
+    width: 34px;
+    height: 36px;
+    box-sizing: border-box;
+}
+
+.winninglotto p{
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.result{
+    width: 382px;
+    height: 36px;
+    padding: 4px 6px 4px 6px;
+    margin-top: 40px;
+}
+
+.bonus{
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.bonus input{
+    position: absolute;
+    right: 0;
+}
+
+
+
+
+
+.title{
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 36px;
+}
+
+.subtitle{
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+}
+
+.body{
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.placeholer{
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.caption{
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 24px;
+}
+
