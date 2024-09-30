@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  align-items: center;
+  background-color: #fcfcfd;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.bar {
+  margin: 0;
+  width: 100%;
+  height: 64px;
+  border-bottom: 1px;
+  background-color: #4e5ba6;
+  display: flex;
+  align-items: center;
+}
+
+.bar_text {
+  position: relative;
+  width: 140px;
+  height: 36px;
+  left: 130px;
+  color: #fff;
+  font-size: 24px;
+  font-family: "Roboto Condensed", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+  line-height: 36px;
+  text-align: left;
+}
+
+.main_contents {
+  width: 414px;
+  height: 727px;
+  margin-top: 61px;
+  display: flex;
+  background-color: #fff;
+  border: #b4b4b4 1px solid;
+  border-radius: 1%;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  width: 382px;
+  height: 24px;
+  margin-top: 52px;
+  text-align: center;
+}
+
+.title span {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 24px;
+  letter-spacing: 0.15000000596046448px;
+  text-align: center;
+}
+
+.money {
+  width: 340px;
+  height: 64px;
+  margin-top: 20px;
+}
+
+.money_text {
+  text-align: left;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.money input {
+  width: 250px;
+  height: 40px;
+  font-size: 16px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
