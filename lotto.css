@@ -12,8 +12,8 @@ html, body {
     font-family: Roboto;
     font-size: 15px;
     line-height: 24px;
-    letter-spacing: 0.5px;
     min-height: 855px;
+    min-width: 414px;
 }
 
 /* 헤더,푸터 */
@@ -65,8 +65,8 @@ footer p{
 .maincontents > * {
     position: relative;
     border-radius: 4px;
-    margin-top: 15px;
-    padding: 8px 8px;
+    margin-top: 28px;
+    margin: 16px;
 }
 
 .maincontents input {
@@ -92,29 +92,44 @@ footer p{
 .inputform{
     width: 382px;
     height: 64px;
+    margin-top: 28px;
 }
 
 .inputform input{
+    margin-top: 4px;
     width: 310px;
 }
 
 .inputform button{
     position: absolute;
     right: 0;
+    bottom: 0;
     width: 56px;
 }
 
 /* 로또들 */
 .lottoscontainer{
     width: 382px;
-    height: 276px;
+    margin-top: 28px;
 }
 
 .lottoscontainer div{
-    margin-top: 8px;
+    margin-top: 4px;
+    letter-spacing: 0.5px;
+}
+
+.lottoscontainer > p{
+    margin-bottom: 8px;
 }
 
 /* 당첨번호입력란 */
+.winninglotto{
+    margin-top: 24px;
+}
+.numbercontainer{
+    position: relative;
+    margin-top: 12px;
+}
 .winninglotto > div input{
     width: 34px;
     margin-top: 10px;
@@ -133,7 +148,7 @@ footer p{
 
 .result{
     width: 382px;
-    margin-top: 40px;
+    margin-top: 27px;
 }
 
 
@@ -148,6 +163,7 @@ footer p{
     font-size: 20px;
     font-weight: 600;
     line-height: 24px;
+    margin-top: 52px;
 }
 
 .caption{
