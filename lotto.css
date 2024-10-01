@@ -1,8 +1,19 @@
 .header {
     font-size: 24px;
+    font-weight: 800;
     color: white;
     background-color: #4E5BA6;
     padding: 14px 130px;
     width: 100%;
     margin: -10px -10px;
+}
+.box {
+    border: 1px solid #0000001F;
+    margin: 141px 513px;
+}
+.box-title {
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    margin: 52px;
 }
