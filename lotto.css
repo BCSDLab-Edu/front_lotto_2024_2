@@ -52,7 +52,7 @@ footer p{
 
 
 /* 메인 */
-.maincontents{
+.main-contents{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -62,14 +62,14 @@ footer p{
     border: 1px solid #0000001F;   
 }
 
-.maincontents > * {
+.main-contents > * {
     position: relative;
     border-radius: 4px;
     margin-top: 28px;
     margin: 16px;
 }
 
-.maincontents input {
+.main-contents input {
     height: 36px;
     border: 1px solid #0000001F;
     box-sizing: border-box; 
@@ -80,7 +80,7 @@ footer p{
     border: 1px solid #B4B4B4
 }
 
-.maincontents button {
+.main-contents button {
     height: 36px;
     background: #4E5BA6;
     color: white;
@@ -89,18 +89,18 @@ footer p{
 }
 
 /* 금액입력폼 */
-.inputform{
+.purchase-form{
     width: 382px;
     height: 64px;
     margin-top: 28px;
 }
 
-.inputform input{
+.purchase-form input{
     margin-top: 4px;
     width: 310px;
 }
 
-.inputform button{
+.purchase-form button{
     position: absolute;
     right: 0;
     bottom: 0;
@@ -108,29 +108,29 @@ footer p{
 }
 
 /* 로또들 */
-.lottoscontainer{
+.lotto-tickets-container{
     width: 382px;
     margin-top: 28px;
 }
 
-.lottoscontainer div{
+.lotto-tickets-container div{
     margin-top: 4px;
     letter-spacing: 0.5px;
 }
 
-.lottoscontainer > p{
+.lotto-tickets-container > p{
     margin-bottom: 8px;
 }
 
 /* 당첨번호입력란 */
-.winninglotto{
+.winning-lotto-form{
     margin-top: 24px;
 }
-.numbercontainer{
+.number-input-container{
     position: relative;
     margin-top: 12px;
 }
-.winninglotto > div input{
+.winning-lotto-form > div input{
     width: 34px;
     margin-top: 10px;
 }
