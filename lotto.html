@@ -9,20 +9,23 @@
 </head>
 
 <body>
+    <!--헤더-->
     <header>
-        <p>🎱 000 로또</p>
+        <p class="title">🎱 000 로또</p>
     </header>
 
-    <div class="maincontents">
-        <p class="title">🎱 내 번호 당첨 확인 🎱</p>
-        <form class="input">
+    <!--메인-->
+    <main class="maincontents">
+        <p class="subtitle">🎱 내 번호 당첨 확인 🎱</p>
+        <!--구매금액-->
+        <form class="inputform">
             <p class="label">구입할 금액을 입력해주세요.</p>
-            <input type="text" placeholder="금액">
-            <button>구입</button>
+            <input type="text" placeholder="금액" id="money" name="money">
+            <button class="caption" type="submit">구입</button>
         </form>
 
-
-        <div class="lottos">
+        <!--로또란-->
+        <div class="lottoscontainer">
             <p>총 7개를 구매하였습니다.</p>
             <div>🎟️12, 28, 22, 37, 19, 23</div>
             <div>🎟️12, 28, 22, 37, 19, 23</div>
@@ -32,32 +35,33 @@
             <div>🎟️12, 28, 22, 37, 19, 23</div>
             <div>🎟️12, 28, 22, 37, 19, 23</div>
         </div>
+        
+        
+        <!--당첨로또번호입력-->
         <p>지난 주 당첨번호 6개와 보너스 번호 1개를 입력해주세요.</p>
-        <div class="winninglotto">
+        <form class="winninglotto">
             <div class="winning">
                 <p>당첨 번호</p>
                 <div>
-                    <input type="text">
-                    <input type="text">
-                    <input type="text">
-                    <input type="text">
-                    <input type="text">
-                    <input type="text">
+                    <input type="text" pattern="[0-9]" maxlength="1">
+                    <input type="text" pattern="[0-9]" maxlength="1">
+                    <input type="text" pattern="[0-9]" maxlength="1">
+                    <input type="text" pattern="[0-9]" maxlength="1">
+                    <input type="text" pattern="[0-9]" maxlength="1">
+                    <input type="text" pattern="[0-9]" maxlength="1">
                 </div>
             </div>
             <div class="bonus">
                 <p>보너스 번호</p>
-                <input type="text">
+                <input type="text" pattern="[0-9]" maxlength="1">
             </div>
-            <button class="result">결과 확인하기</button>
-        </div>
-    </div>
+            <button class="result caption" type="submit">결과 확인하기</button>
+        </form>
+    </main>
 
-
-
-
+    <!--푸터-->
     <footer>
-        <p>Copyright 2023. woowacourse</p>
+        <p class="caption">Copyright 2023. woowacourse</p>
     </footer>
 </body>
 
