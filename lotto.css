@@ -1,19 +1,60 @@
-.header {
-    font-size: 24px;
-    font-weight: 800;
-    color: white;
-    background-color: #4E5BA6;
-    padding: 14px 130px;
-    width: 100%;
-    margin: -10px -10px;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+html, body{
+    font-family: "Roboto";
 }
-.box {
-    border: 1px solid #0000001F;
-    margin: 141px 513px;
+header {
+    width: 1440px;
+    height: 64px;
+    gap: 0px;
+    border: 0px 0px 1px 0px;
+    opacity: 0px;
+    background: #4E5BA6;
+    border-bottom: 1px solid #4E5BA633
 }
-.box-title {
+header > h2 {
     font-size: 24px;
     font-weight: 700;
+    color: white;
+    padding: 14px 130px;
+    line-height: 36px;
+    
+}
+.main-contents {
+    width: 414px;
+    height: 727px;
+    margin-top: 141px;
+    margin-left: 513px;
+    gap: 0px;
+    opacity: 0px;
+    border: 1px solid #0000001F
+}
+.main-contents > .title {
+    width: 382px;
+    height: 24px;
+    margin-top: 52px;
+    margin-left: 16px;
+    gap: 0px;
+    opacity: 0px;
     text-align: center;
-    margin: 52px;
+}
+.main-contents > .title > h2 {
+    font-family: Roboto;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.15000000596046448px;
+    text-align: center;    
+}
+.main-contents > .title > h2 > span {
+    font-family: Roboto;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0.15000000596046448px;
+    text-align: center;    
+}
+.main-contents > p {
+    font-size: 15px;
+    font-weight: 400;
+    margin: 16px;
 }
