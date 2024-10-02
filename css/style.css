@@ -66,9 +66,9 @@ body {
 }
 
 .money {
-  width: 324px;
+  width: 382px;
   height: 64px;
-  margin-top: 30px;
+  margin-top: 28px;
 }
 
 .money_text {
@@ -77,10 +77,11 @@ body {
   font-size: 15px;
   font-weight: 400;
   line-height: 24px;
+  margin-bottom: 4px;
 }
 
 .money input {
-  width: 250px;
+  width: 310px;
   height: 40px;
   font-size: 16px;
   padding: 5px 10px;
@@ -117,9 +118,9 @@ body {
 }
 
 .context {
-  width: 324px;
+  width: 382px;
   height: 24px;
-  margin-top: 30px;
+  margin-top: 28px;
 }
 
 .context p {
@@ -129,8 +130,9 @@ body {
 }
 
 .lottery {
-  width: 324px;
+  width: 382px;
   height: 276px;
+  margin-top: 8px;
 }
 
 .container {
@@ -139,6 +141,7 @@ body {
   align-items: center;
   justify-content: left;
   margin-left: -6px;
+  margin-bottom: 4px;
 }
 
 .container span {
@@ -157,22 +160,23 @@ body {
   font-weight: 400;
   line-height: 24px;
   letter-spacing: 0.5px;
+  margin-left: 10px;
   text-align: left;
 }
 
 .target {
-  width: 324px;
+  width: 382px;
   height: 104px;
-  margin-top: 20px;
+  margin-top: 24px;
   display: inline;
 }
 
 .target p {
   font-family: "Roboto Condensed", sans-serif;
-  font-size: 12px;
+  font-size: 15px;
   font-weight: 400;
   line-height: 24px;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.2px;
   text-align: left;
 }
 
@@ -188,11 +192,15 @@ body {
 
 .target_number p {
   font-family: "Roboto Condensed", sans-serif;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 400;
   line-height: 24px;
   letter-spacing: 0.5px;
   text-align: left;
+}
+
+.number_inputs {
+  margin-top: 4px;
 }
 
 .number_inputs input {
@@ -211,16 +219,17 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .bonus_target {
-  width: 80px;
+  width: 84px;
   height: 68px;
   margin-top: 12px;
+  margin-left: 54px;
   text-align: right;
 }
 
 .bonus_target p {
   text-align: right;
   font-family: "Roboto Condensed", sans-serif;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 400;
   line-height: 24px;
   letter-spacing: 0.5px;
@@ -229,6 +238,7 @@ input[type="number"]::-webkit-inner-spin-button {
 .bonus_target input {
   width: 34px;
   height: 36px;
+  margin-top: 4px;
   border-radius: 4px;
   border: #b4b4b4 1px solid;
   text-align: center;
@@ -242,9 +252,9 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .check {
-  width: 324px;
-  height: 40px;
-  margin-top: 30px;
+  width: 382px;
+  height: 36px;
+  margin-top: 27px;
   border: 1px solid #ccc;
   border-radius: 4px;
   background-color: #4e5ba6;
