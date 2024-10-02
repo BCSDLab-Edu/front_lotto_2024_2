@@ -24,9 +24,6 @@ header{
     padding-inline: 130px;
     height: 64px;
     top: 0;
-}
-
-header > span{
     color: white;
 }
 
@@ -40,13 +37,8 @@ footer{
     align-items: center;
     height: 80px;
     border-top: 1px solid #4E5BA633;
-}
-
-footer span{
     color:#4E5BA6;
 }
-
-
 
 /* 메인 */
 .main-contents{
@@ -54,8 +46,7 @@ footer span{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    width: 414px;
-    height: 727px;
+    padding: 52px 16px 32px;
     border: 1px solid #0000001F;   
 }
 
@@ -66,10 +57,8 @@ footer span{
 }
 
 .main-contents input {
-    height: 28px;
-    border: 1px solid #0000001F;
+    height: 34px;
     font-size: 15px;
-    padding: 4px;
     border-radius: 4px;
     border: 1px solid #B4B4B4;
 }
@@ -84,13 +73,11 @@ footer span{
 
 /* 금액입력폼 */
 .purchase-form{
-    position: relative;
-    height: 64px;
     margin-top: 28px;
 }
 
 .purchase-form input{
-    width: 310px;
+    width: 306px;
 }
 
 .purchase-form button{
@@ -105,28 +92,25 @@ footer span{
 }
 
 .lotto-tickets-container div{
-    margin-top: 4px;
+    display: flex;
+    align-items: center;
     letter-spacing: 0.5px;
-}
-
-.lotto-tickets-container > span{
-    margin-bottom: 8px;
+    height: 36px;
 }
 
 /* 당첨번호입력란 */
 .winning-lotto-form{
-    display: flex;
-    flex-direction: column;
     gap: 12px;
     margin-top: 24px;
 }
+
 .number-input-container{
     display: flex;
     justify-content: space-between;
 }
 
 .number-input-container input{
-    width: 26px;
+    width: 30px;
 }
 
 .winning, .bonus {
@@ -143,11 +127,9 @@ footer span{
 .bonus {
     align-items: flex-end;
 }
-  
 
 .result{
-    width: 382px;
-    margin-top: 27px;
+    margin-top: calc(27px - 12px);
 }
 
 
@@ -162,7 +144,6 @@ footer span{
     font-size: 20px;
     font-weight: 600;
     line-height: 24px;
-    margin-top: 52px;
 }
 
 .caption{
