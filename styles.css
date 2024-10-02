@@ -1,0 +1,270 @@
+body {
+    margin: 0;
+    position:relative; 
+    height: 100vh;
+}
+
+.rectangle {
+    width: 100vw;
+    height: 6.25vh;
+    background-color: #4E5BA6;
+    border-bottom: 1px solid #4E5BA6;
+}
+
+
+.textbox1 {
+    margin: 0;
+    width: 8.47vw;/*122px*/
+    height: 3.52vh; /*36px*/
+    position: absolute; 
+    top: 1.37vh;/*14px*/
+    left: 9.03vw;/*130px*/
+    gap: 0px;
+    opacity: 1; 
+    white-space: nowrap;
+}
+
+.text1 {
+    font-family: 'Roboto';
+    font-size: 1.67vw;/*24px*/
+    font-weight: 700;
+    line-height: 3.52vh;/*36px*/
+    text-align: left;
+    color: white; 
+    margin: 0;
+}
+
+.maincontent{
+    margin: 0;
+    width: 414px;
+    height: 727px;
+    top: 50%;
+    left: 50%;
+    opacity: 0px;
+    position: absolute;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);/*그림자 효과*/
+    transform: translate(-50%, -50%);
+}
+
+.title{
+    position: absolute;
+    width: 382px;
+    height: 24px;
+    top: 32px;
+    left: 16px;
+    opacity: 1;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.titlelotto{
+    margin: 0;
+    font-family: 'Roboto';
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    align-items: center;
+}
+
+
+.input{
+    width: 310px; /*310px*/
+    height: 64px; /*64px*/
+    position: absolute; 
+    top: 104px; 
+    left: 16px;
+    opacity: 1;
+}
+
+label{
+    font-size: 15px; 
+    font-family: 'Roboto';
+}
+
+input{
+    margin-top: 7px;
+    width: 290px;
+    height: 36px;/*36px*/
+    padding: 0px 3px 3px 3px;/*7px*/
+    border-radius: 4px;
+}
+
+input::placeholder{
+    font-size: 14px;
+}
+
+.buy-button{
+    position: absolute;
+    width: 56px;/*56px*/
+    height: 42px;/*36px*/
+    top: 132px;
+    left: 342px;
+    background-color: #4E5BA6;
+    color: white;
+    font-size: 14px;
+    font-family: 'Roboto';
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.amountbox{
+    margin-bottom: 3px;
+    position: absolute;
+    top: 180px;
+    left:16px;
+    width: 310px;
+    height: 24px;
+}
+
+.amount{
+    margin: 0;
+    font-family: 'Roboto';
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.lottonumgroup{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    position: absolute;
+    width: 238px;
+    height: 276px;
+    top: 228px;
+    left: 16px;
+    padding: 0;
+}
+
+.num{
+    margin-top: 5px;
+    font-family: 'Roboto';
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.image{
+    display: flex;
+    flex-direction: center;
+    gap: 10px;
+}
+.item{
+    width: 34px;
+    height: 36px;
+    object-fit: cover;
+}
+
+.blank{
+    position: absolute;
+    top: 259px;
+    left: 274px;
+    width: 100px;
+    height: 100px;
+}
+
+.winning-lotto{
+    position: absolute;
+    top: 528px;
+    left: 16px;
+    width: 382px;
+    height: 104px;
+    border-radius: 4px;
+}
+
+.winning-lotto-title{
+    margin-top: 20px;
+    font-family: 'Roboto';
+    font-size: 15px;
+    font-weight: 400;
+    color: #000000;
+    white-space: nowrap;
+}
+
+.correctnum{
+    
+}
+
+.correctnum-title{
+    font-family: 'Roboto';
+    font-size: 15px;
+    font-weight: 400;
+    color: #000000;
+}
+
+.numrectangle-group{
+    margin-top: 5px;
+    width: 244px;
+    height: 36px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.numrectangle{
+    width: 34px;
+    height: 36px;
+    border-radius: 4px;
+    border: 1px solid #b4b4b4;
+}
+
+.bonusnum{
+    position: absolute;
+    top: 44px;
+    left: 310px;
+    width: 76px;
+    height: 68px;
+    border-radius: 4px;
+    white-space: nowrap;
+}
+
+.bonusnum-title{
+    margin-bottom: 2px;
+    font-size: 15px;
+    font-family: 'Roboto';
+    font-weight: 400;
+}
+
+.bonusnumrectangle{
+    margin: 0;
+    margin-left: 40px;
+    width: 34px;
+    height: 36px;
+    border-radius: 4px;
+    border: 1px solid #b4b4b4;
+}
+
+.result{
+    position: absolute;
+    width: 382px;
+    height: 36px;
+    top: 670px;
+    left: 16px;
+    background-color: #4E5BA6;
+    color: white;
+    font-size: 14px;
+    font-family: 'Roboto';
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.copyright{
+    position: absolute;
+    top: 1050px;
+    width: 100vw;
+    height: 80px;
+    border-top: 1px solid #4E5BA6;
+    display: flex;
+    font-size: 14px;
+    font-family: 'Roboto';
+    font-weight: 700;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
