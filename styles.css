@@ -41,6 +41,7 @@ body {
     top: 500px;
     left: 50%;
     opacity: 0px;
+    border-radius: 4px;
     position: relative;
     background-color: white;
     border: 1px solid rgba(0, 0, 0, 0.2);
@@ -254,7 +255,7 @@ input::placeholder{
 }
 
 .copyright{
-    position: relative;
+    position: relative;/*fixed랑 둘중에 고민*/
     top: 200px;
     width: 100vw;
     height: 80px;
