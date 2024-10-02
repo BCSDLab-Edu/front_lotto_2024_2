@@ -23,10 +23,9 @@ body {
 }
 
 .bar_text {
-  position: relative;
   width: 140px;
   height: 36px;
-  left: 130px;
+  margin-left: 130px;
   color: #fff;
   font-size: 24px;
   font-family: "Roboto Condensed", sans-serif;
