@@ -38,10 +38,10 @@ body {
     margin: 0;
     width: 414px;
     height: 727px;
-    top: 50%;
+    top: 500px;
     left: 50%;
     opacity: 0px;
-    position: fixed;
+    position: relative;
     background-color: white;
     border: 1px solid rgba(0, 0, 0, 0.2);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);/*그림자 효과*/
@@ -254,8 +254,8 @@ input::placeholder{
 }
 
 .copyright{
-    position: absolute;
-    top: 1050px;
+    position: relative;
+    top: 200px;
     width: 100vw;
     height: 80px;
     border-top: 1px solid #4E5BA6;
