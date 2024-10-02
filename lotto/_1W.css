@@ -46,7 +46,6 @@ body {
   position: absolute;
   display: flex;
   align-items: center;
-  /*padding-left: 19%;*/
   width: 100%;
   height: 22px;
   top: 4.5%;
@@ -72,7 +71,6 @@ body {
   top: 12%;
   box-sizing: border-box;
   padding-left: 3%;
-
   font-size: 14px;
   font-weight: 400;
   line-height: 24px;
@@ -150,7 +148,7 @@ body {
 }
 #bonus_num {
   position: absolute;
-  top: 150%; /*바로 직전 상위 요소가 ab이거나 rel일 때 그 요소 크기를 기준으로 한다. 여기서는 input_box크기의 180%내려가는 코드 */
+  top: 150%;
   width: 30%;
   left: 60%;
   font-size: 15px;
@@ -176,7 +174,6 @@ body {
 #right {
   width: 14%;
 }
-
 #result_button {
   position: absolute;
   display: flex;
@@ -203,7 +200,6 @@ body {
   width: 100%;
   height: 6%;
   top: 742px;
-  border: 1px 0px 0px 0px;
   border: 1px solid #4e5ba633;
 }
 #copyRight {
