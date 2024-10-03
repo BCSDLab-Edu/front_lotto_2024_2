@@ -199,7 +199,9 @@ body {
 }
 
 .number_inputs {
+  display: flex;
   margin-top: 4px;
+  justify-content: space-between;
 }
 
 .number_inputs input {
