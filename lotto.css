@@ -89,6 +89,8 @@ footer{
 .lotto-tickets-container{
     width: 382px;
     margin-top: 28px;
+    height: 300px;
+    overflow: auto;
 }
 
 .lotto-tickets-container div{
