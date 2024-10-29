@@ -8,6 +8,11 @@ open_popup.addEventListener('click', ()=>{
     background.style.display = 'flex';
 });
 
+background.addEventListener('click', ()=>{
+    popup.style.display = 'none';
+    background.style.display = 'none';
+})
+
 close_popup.addEventListener('click', ()=>{
     popup.style.display = 'none';
     background.style.display = 'none';
