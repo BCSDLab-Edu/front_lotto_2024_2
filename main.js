@@ -2,11 +2,17 @@ const $purchasebutton = document.getElementsByClassName("purchase-button")[0];
 const $purchasemoney=document.getElementsByClassName("purchase-money")[0];
 const $lottolist= document.getElementsByClassName("lotto-tickets-container")[0];
 const $resultbutton=document.getElementsByClassName("result")[0];
+const $modal=document.getElementsByClassName("modal")[0];
+const $modalclosex=document.getElementsByClassName("modal-close-x")[0];
+const $restartbutton=document.getElementsByClassName("restart")[0];
+$modal.style.display = 'none';
 
 function randomnumber(){
     const RandomRange=30;
     const lottoNumbers = [];
-    for (let i = 0; i < 6; i++) {lottoNumbers.push(Math.floor(Math.random() * RandomRange));}
+    for (let i = 0; i < 6; i++) {
+        lottoNumbers.push(Math.floor(Math.random() * RandomRange));
+    }
     return lottoNumbers.join(", ");
 }
 
@@ -20,10 +26,24 @@ function buyLotto(event){
     }
 }
 
-function resultLotto(){
-    
+function toggleModal(){
+    if($modal.style.display === 'flex')$modal.style.display = 'none';
+    else $modal.style.display='flex';
 }
+
+function resultLotto(event){
+    event.preventDefault();
+    Checkwinning();
+    toggleModal();
+}
+
+function Checkwinning(){
+
+}
+
+
 
 $purchasebutton.addEventListener("click",buyLotto);
 $resultbutton.addEventListener("click",resultLotto);
-
+$modalclosex.addEventListener("click",toggleModal);
+$restartbutton.addEventListener("click",toggleModal);
