@@ -40,12 +40,6 @@ function buyLotto(event){
     console.log(lottos)
 }
 
-//모달 ON/OFF
-function toggleModal(){
-    if($modal.style.display === 'flex')$modal.style.display = 'none';
-    else $modal.style.display='flex';
-}
-
 
 //로또 결과
 function resultLotto(event){
@@ -55,8 +49,10 @@ function resultLotto(event){
     toggleModal();
 }
 
+
 //당첨로또 체크
 function Checkwinning(){
+    winMoneyCount=[0,0,0,0,0]
     const winning = Array.from($winninglottos).map(win => parseInt(win.value,10));
     const bonuswinning = $bonuswinninglotto.value;
     lottos.forEach(lotto=>{
@@ -79,6 +75,7 @@ function Checkwinning(){
     console.log(winning);
 }
 
+//모달 작성
 function modalHtmlInsert(){
     const winMoney=[5000,50000,1500000,30000000,2000000000]
     const winCount=["3개","4개","5개","5개+보너스볼","6개"]
@@ -101,9 +98,15 @@ function modalHtmlInsert(){
         profit+=winMoney[i]*winMoneyCount[i];
     }
     
-    $profit.textContent=`당신의 총 수익률은${profit/(boughtCount*1000)*100}%입니다.`
+    $profit.textContent=`당신의 총 수익률은${((profit-(boughtCount*1000))/(boughtCount*1000)*100)}%입니다.`
+}
+//모달 ON/OFF
+function toggleModal(){
+    if($modal.style.display === 'flex')$modal.style.display = 'none';
+    else $modal.style.display='flex';
 }
 
+//클릭이벤트
 $purchasebutton.addEventListener("click",buyLotto);
 $resultbutton.addEventListener("click",resultLotto);
 $modalclosex.addEventListener("click",toggleModal);
