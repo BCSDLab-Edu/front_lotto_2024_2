@@ -41,13 +41,23 @@ async function getLottoNumber(){
             }
             numberList.push(data['bnusNo']);
             return numberList;
-        } else {
-            throw new Error("API 요청에 실패했습니다.");
         }
     } catch (error) {
         console.error('로또 번호를 가져오는 중 오류 발생:', error);
         return false;
     }
+}
+
+// table 값 불러오기
+function getInputNumber(){
+    let InputNumbers = new Map();
+    let idx = 1;
+
+    document.querySelectorAll('#lottery-table li p').forEach((el) => {
+        InputNumbers.set(idx, el.value.split(', '));
+    })
+
+    return InputNumbers;
 }
 
 // 구매 개수 구현
@@ -77,7 +87,8 @@ buy_lottery.addEventListener('click', () => {
         let lotteryList = [];
 
         for (let i = 1; i <= 6; i++){
-            lotteryList.push(Math.floor(Math.random() * 45) + 1);
+            let num = Math.floor(Math.random() * 45) + 1;
+            lotteryList.push(num);
         }
 
         p.textContent = lotteryList.join(", ");
@@ -90,7 +101,7 @@ buy_lottery.addEventListener('click', () => {
     for (let i = 0; i < lottery_amount; i++){
         addLotteryList();
     }
-    if (lottery_amount == 0) {
+    if (lottery_amount === 0) {
         amountContext.innerHTML = `<p>아무것도 구매하지 않으셨습니다.</p>`;
     } else {
         amountContext.innerHTML = `<p>총 ${lottery_amount}개를 구매하였습니다.</p>`;
@@ -125,6 +136,43 @@ open_popup.addEventListener('click', async () => {
             lotteryNumber.innerHTML = '로또 번호를 가져오는 데 실패했습니다.';
         }
     }
+
+    let countPrize = [0,0,0,0,0];
+    let countAccordNumber = getInputNumber();
+    
+    for (let i = 1; i <= countAccordNumber.size; i++) {
+        let list = map.get(i);
+        let cnt = 0;
+        let isBonus = false;
+
+        for (let j of list) {
+            if (j in numberList) {
+                cnt++;
+            }
+            if (j === bonus_number) {
+                isBonus = true;
+            }
+        }
+        if (cnt === 3){
+            countPrize[0]++;
+        } else if (cnt === 4){
+            countPrize[1]++;
+        } else if (cnt === 5 && isBonus) {
+            countPrize[3]++;
+        } else if (cnt === 5) {
+            countPrize[2]++;
+        } else if (cnt === 6) {
+            countPrize[4]++;
+        }
+    }
+
+    const floatingContentMainTable = document.querySelector('.floating-content-main-table');
+    const lines = floatingContentMainTable.querySelectorAll('.floating-content-main-line');
+
+    lines.forEach((line, index) => {
+        const text3 = line.querySelector('.floating-content-main-text3');
+        text3.textContent = countPrize[index] ? countPrize[index] + '개' : '0개';
+    });
 });
 
 background.addEventListener('click', closePopup);
