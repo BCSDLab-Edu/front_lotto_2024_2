@@ -4,6 +4,9 @@ const background = document.getElementById('popup-background');
 const close_popup = document.getElementById('close-floating-content');
 const buy_lottery = document.getElementById('buy-button');
 const money_amount = document.getElementById('money-amount');
+const restart = document.getElementById('restart');
+const lotteryTable = document.getElementById("lottery-table");
+const amountContext = document.getElementById('amount-context');  // 총 ~ 개
 
 async function getLottoNumber(){
     const firstLottoDate = new Date('2002-12-07');
@@ -46,10 +49,8 @@ async function getLottoNumber(){
     }
 }
 
-buy_lottery.addEventListener('click', () => {  // 구매 개수 구현
-    const amountContext = document.getElementById('amount-context');  // 총 ~ 개
-    const lotteryTable = document.getElementById("lottery-table");
-
+// 구매 개수 구현
+buy_lottery.addEventListener('click', () => {
     let lottery_amount = money_amount.value / 1000;  // 구매 갯수
 
     if (lottery_amount > 15) lottery_amount = 15;  // 최대 갯수 제한
@@ -95,10 +96,11 @@ buy_lottery.addEventListener('click', () => {  // 구매 개수 구현
     }
 });
 
-open_popup.addEventListener('click', async ()=>{
+// 팝업 열기
+open_popup.addEventListener('click', ()=>{
     popup.style.display = 'flex';
     background.style.display = 'flex';
-    const lottery = await getLottoNumber();
+    /* const lottery = await getLottoNumber();
     const lotteryNumber = document.getElementById('lottery-number');
 
     if (lottery){
@@ -109,12 +111,20 @@ open_popup.addEventListener('click', async ()=>{
     } else {
         lotteryNumber.innerHTML = '로또 번호를 가져오는데 실패했습니다.';
     }
+    */
+
 
 })
 
 background.addEventListener('click', closePopup);
 close_popup.addEventListener('click', closePopup);
+restart.addEventListener('click', () => {
+    closePopup();
+    lotteryTable.innerHTML = '';
+    amountContext.innerHTML = `<p>금액을 입력해주세요.</p>`;
+})
 
+// 팝업 닫기
 function closePopup() {
     popup.style.display = 'none';
     background.style.display = 'none';
