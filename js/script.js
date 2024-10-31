@@ -54,7 +54,8 @@ function getInputNumber(){
     let idx = 1;
 
     document.querySelectorAll('#lottery-table li p').forEach((el) => {
-        InputNumbers.set(idx, el.value.split(', '));
+        InputNumbers.set(idx, el.textContent.split(', '));
+        idx++;
     })
 
     return InputNumbers;
@@ -130,6 +131,8 @@ open_popup.addEventListener('click', async () => {
         if (lottery) {
             let bonusNumberNow = lottery.pop();
             lottery.sort((a, b) => a - b);
+            numberList = [...lottery];
+            bonus_number = bonusNumberNow;
             lotteryNumber.innerHTML = `${lottery.join(', ')} + ${bonusNumberNow}`;
             lotteryNumber.style.fontSize = '16px';
         } else {
@@ -141,12 +144,12 @@ open_popup.addEventListener('click', async () => {
     let countAccordNumber = getInputNumber();
     
     for (let i = 1; i <= countAccordNumber.size; i++) {
-        let list = map.get(i);
+        let list = countAccordNumber.get(i);
         let cnt = 0;
         let isBonus = false;
 
         for (let j of list) {
-            if (j in numberList) {
+            if (numberList.includes(j)) {
                 cnt++;
             }
             if (j === bonus_number) {
@@ -169,10 +172,23 @@ open_popup.addEventListener('click', async () => {
     const floatingContentMainTable = document.querySelector('.floating-content-main-table');
     const lines = floatingContentMainTable.querySelectorAll('.floating-content-main-line');
 
+    let tmpBool = true;
     lines.forEach((line, index) => {
-        const text3 = line.querySelector('.floating-content-main-text3');
-        text3.textContent = countPrize[index] ? countPrize[index] + '개' : '0개';
+        if (tmpBool) tmpBool = false;
+        else {
+            const text3 = line.querySelector('.floating-content-main-text3');
+            text3.textContent = countPrize[index-1] ? countPrize[index-1] + '개' : '0개';
+        }
     });
+
+    const floatingContentRate = document.querySelector('.floating-content-rate span');
+    let moneyProfitList = [5000, 50000, 1500000, 30000000, 2000000000];
+    let moneyProfit = 0;
+    for (let i = 0; i < countPrize.length; i++) {
+        moneyProfit += countPrize[i] * moneyProfitList[i];
+    }
+    moneyProfit /= money_amount.value * 100;
+    floatingContentRate.textContent = `당신의 총 수익률은 ${moneyProfit}%입니다.`;
 });
 
 background.addEventListener('click', closePopup);
