@@ -1,4 +1,4 @@
-const $purchasebutton = document.getElementsByClassName("purchase-button")[0];
+const $purchaseButton = document.getElementsByClassName("purchase-button")[0];
 const $purchasemoney=document.getElementsByClassName("purchase-money")[0];
 const $lottolist= document.getElementsByClassName("lotto-tickets-container")[0];
 const $resultbutton=document.getElementsByClassName("result")[0];
@@ -11,13 +11,29 @@ const $resulttable= document.querySelector('.result-table');
 const $profit = document.querySelector('.profit');
 $modal.style.display = 'none';
 
-let lottos=[]
-let winMoneyCount=[0,0,0,0,0];
-let boughtCount=0;
-//무작위 로또생성
+let lottos=[]                   //구입로또리스트
+let winMoneyCount=[0,0,0,0,0];  //당첨갯수리스트
+
+//클릭이벤트
+$purchaseButton.addEventListener("click",(event)=>{
+    event.preventDefault();
+    buyLottoHtmlInsert();
+});
+
+$resultbutton.addEventListener("click",(event) =>{
+    event.preventDefault();
+    Checkwinning();
+    modalHtmlInsert();
+    toggleModal();
+});
+$modalclosex.addEventListener("click",toggleModal);
+$restartbutton.addEventListener("click",toggleModal);
+
+
+//무작위 6개 로또번호 생성
 function randomnumber(){
     const RandomRange=30;   //로또숫자범위
-    const lottoNumbers = [];
+    const lottoNumbers = [];//중복제거용
     while(true){
         const num= Math.floor(Math.random() * RandomRange)
         if(!lottoNumbers.includes(num)){lottoNumbers.push(num);} 
@@ -28,25 +44,14 @@ function randomnumber(){
 }
 
 //로또 구입
-function buyLotto(event){
-    event.preventDefault()
+function buyLottoHtmlInsert(){
     lottos=[]
-    boughtCount=Math.floor($purchasemoney.value/1000);
+    const boughtCount=Math.floor($purchasemoney.value/1000);
     $lottolist.innerHTML = `<span class="lotto-bought-title">총  ${boughtCount}개를 구매하였습니다.</span>`
     for(let count=0;count<boughtCount;count++){
         $lottolist.innerHTML+=
         `<div>🎟️ ${randomnumber()}</div>`
     }
-    console.log(lottos)
-}
-
-
-//로또 결과
-function resultLotto(event){
-    event.preventDefault();
-    Checkwinning();
-    modalHtmlInsert();
-    toggleModal();
 }
 
 
@@ -70,9 +75,6 @@ function Checkwinning(){
             }
         }
     })
-    console.log(winMoneyCount);
-    console.log(bonuswinning);
-    console.log(winning);
 }
 
 //모달 작성
@@ -97,17 +99,11 @@ function modalHtmlInsert(){
         `
         profit+=winMoney[i]*winMoneyCount[i];
     }
-    
-    $profit.textContent=`당신의 총 수익률은${((profit-(boughtCount*1000))/(boughtCount*1000)*100)}%입니다.`
+    $profit.textContent=`당신의 총 수익률은 ${((profit-(lottos.length*1000))/(lottos.length*1000)*100).toFixed(2)}%입니다.`
 }
+
 //모달 ON/OFF
 function toggleModal(){
     if($modal.style.display === 'flex')$modal.style.display = 'none';
     else $modal.style.display='flex';
 }
-
-//클릭이벤트
-$purchasebutton.addEventListener("click",buyLotto);
-$resultbutton.addEventListener("click",resultLotto);
-$modalclosex.addEventListener("click",toggleModal);
-$restartbutton.addEventListener("click",toggleModal);
