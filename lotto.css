@@ -2,6 +2,7 @@
 html, body{
     font-family: "Roboto";
 }
+
 header {
     width: 100%;
     min-height: 64px;
@@ -60,12 +61,14 @@ input {
     margin: 76px auto 77px auto;
     border: 1px solid #0000001F
 }
+
 .main-contents > .title {
     width: 382px;
     height: 24px;
     margin: 52px 0px 52px 16px;
     text-align: center;
 }
+
 .main-contents > .title > h2 {
     font-family: Roboto;
     font-size: 24px;
@@ -74,17 +77,21 @@ input {
     letter-spacing: 0.15px;
     text-align: center;    
 }
+
 .main-contents > .title > h2 > span {
     font-weight: 600;
 }
+
 .main-contents > div {
     margin: 0px 0px 24px 16px;
 }
+
 .main-contents > div > p {
     font-size: 15px;
     font-weight: 400;
     margin-bottom: 20px;
 }
+
 .numbers{
     display: flex;
     justify-content: space-between;
