@@ -93,7 +93,7 @@ input {
     margin-bottom: 20px;
 }
 
-.numbers{
+.numbers {
     display: flex;
     justify-content: space-between;
     margin: 0px 16px 16px 0px;
@@ -101,6 +101,18 @@ input {
 
 .numbers > div > p{
     margin-top: 16px;
+}
+
+#popup-winnings {
+    display: none;
+    position: fixed;
+    width: 350px;
+    height: 500px;
+    top: 272px;
+    left: 525px;
+    margin: 76px auto 77px auto;
+    background-color: white;
+    border: 1px solid #0000001F;
 }
 
 .emoji.ticket{

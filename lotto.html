@@ -10,11 +10,11 @@
         <header>
             <h2>🎱 조윤재 로또</h2>
         </header>
+
         <div class="main-contents">
             <div class="title">
                 <h2>🎱<span>내 번호 당첨 확인</span>🎱</h2>
             </div>
-            
             <div>
                 <p>구입할 금액을 입력해주세요.</p>
                 <input id="input-price">
@@ -54,17 +54,28 @@
             </div>
             <button id="button-result">결과 확인하기</button>
         </div>
+
+        <div id="popup-winnings">
+            <button id="button-retry">다시 시작하기</button>
+        </div>
         
         <footer>
             <span>Copyright 2023, woowacourse</span>
         </footer>
+
         <script>
             const button_purchase = document.getElementById("button-purchase");
-
-            function openPopup(){
-                alert("테스트");
+            const button_retry = document.getElementById("button-retry");
+            const popup = document.getElementById("popup-winnings");
+            function open_popup(){
+                popup.style.display = "flex";
             }
-            button_purchase.addEventListener("click", openPopup);
+            
+            function close_popup(){
+                popup.style.display = "none";
+            }
+            button_purchase.addEventListener("click", open_popup);
+            button_retry.addEventListener("click", close_popup);
         </script>
     </body>
 </html>
