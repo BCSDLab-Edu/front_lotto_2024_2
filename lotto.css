@@ -10,6 +10,7 @@ header {
     border: 0px 0px 1px 0px;
     border-bottom: 1px solid #4E5BA633
 }
+
 header > h2 {
     font-size: 24px;
     font-weight: 700;
@@ -31,11 +32,11 @@ button {
     font-weight: 700;
 }
 
-.btn-purchase{
+#button-purchase{
     width: 56px;
 }
 
-.btn-result{
+#button-result{
     width: 382px;
 }
 
@@ -46,7 +47,7 @@ input {
     border: 1px solid #B4B4B4;
 }
 
-.input-price {
+#input-price {
     width: 290px;
 }
 

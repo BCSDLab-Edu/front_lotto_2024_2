@@ -17,8 +17,8 @@
             
             <div>
                 <p>구입할 금액을 입력해주세요.</p>
-                <input class="input-price">
-                <button class="btn-purchase">구입</button>
+                <input id="input-price">
+                <button id="button-purchase">구입</button>
             </div>
             <div>
                 <p>총 7개를 구매하였습니다.</p>
@@ -51,14 +51,20 @@
                         </p>
                     </div>
                 </div>
-                
-                
             </div>
-            <button class="btn-result">결과 확인하기</button>
+            <button id="button-result">결과 확인하기</button>
         </div>
         
         <footer>
             <span>Copyright 2023, woowacourse</span>
         </footer>
+        <script>
+            const button_purchase = document.getElementById("button-purchase");
+
+            function openPopup(){
+                alert("테스트");
+            }
+            button_purchase.addEventListener("click", openPopup);
+        </script>
     </body>
 </html>
