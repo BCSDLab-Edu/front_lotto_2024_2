@@ -48,7 +48,7 @@
             </div>
             
         </div>
-        <div id="popup">
+        <div id="modal">
             <h3 id="button-close">X</h3>
             <h3>🏆 당첨 통계 🏆</h3>
             <table id="table-winnings">
@@ -87,7 +87,7 @@
             <button id="button-retry">다시 시작하기</button>
         </div>
 
-        <div id="popup-background"></div>
+        <div id="modal-background"></div>
         
         <footer>
             <span>Copyright 2023, woowacourse</span>
@@ -99,8 +99,8 @@
             const button_result = document.getElementById("button-result");
             const button_close = document.getElementById("button-close");
             const button_retry = document.getElementById("button-retry");
-            const popup = document.getElementById("popup");
-            const popup_background = document.getElementById("popup-background");
+            const modal = document.getElementById("modal");
+            const modal_background = document.getElementById("modal-background");
             const lotto_list = document.getElementById("lottos");
             const input_price = document.getElementById("input-price");
 
@@ -149,13 +149,13 @@
             }
 
             function open_result(){
-                popup.style.display = "flex";
-                popup_background.style.display = "flex";
+                modal.style.display = "flex";
+                modal_background.style.display = "flex";
             }
             
             function close_result(){
-                popup.style.display = "none";
-                popup_background.style.display = "none";
+                modal.style.display = "none";
+                modal_background.style.display = "none";
             }
 
             function check_winnings(){
