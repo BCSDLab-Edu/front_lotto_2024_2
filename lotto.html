@@ -22,16 +22,8 @@
                 </div>
             </div>
             <div class="box-list">
-                <p>총 7개를 구매하였습니다.</p>
-                <ul>
-                    <li><span class="emoji ticket">🎟️</span><p>12, 28, 22, 37, 19, 23</p></li>
-                    <li><span class="emoji ticket">🎟️</span><p>12, 28, 22, 37, 19, 23</p></li>
-                    <li><span class="emoji ticket">🎟️</span><p>2, 28, 22, 37, 19, 23</p></li>
-                    <li><span class="emoji ticket">🎟️</span><p>12, 28, 22, 37, 19, 23</p></li>
-                    <li><span class="emoji ticket">🎟️</span><p>12, 28, 22, 37, 19, 23</p></li>
-                    <li><span class="emoji ticket">🎟️</span><p>12, 28, 22, 37, 19, 23</p></li>
-                    <li><span class="emoji ticket">🎟️</span><p>12, 28, 22, 37, 19, 23</p></li>
-                </ul>
+                <p>총 0개를 구매하였습니다.</p>
+                <ul id="lottos"></ul>
             </div>
             <div class="box-check-winnings">
                 <p>지난 주 당첨번호 6개와 보너스 번호 1개를 입력해주세요.</p>
@@ -102,12 +94,51 @@
         </footer>
 
         <script>
+            const my_lots = [];
             const button_purchase = document.getElementById("button-purchase");
             const button_result = document.getElementById("button-result");
             const button_close = document.getElementById("button-close");
             const button_retry = document.getElementById("button-retry");
             const popup = document.getElementById("popup");
             const popup_background = document.getElementById("popup-background");
+            const lotto_list = document.getElementById("lottos");
+            const input_price = document.getElementById("input-price");
+
+            function purchase(){
+                const purchase_count = Math.floor(input_price.value / 1000);
+                for (let i=0; i<purchase_count; ++i){
+                    const lots = draw_lots();
+                    add_list(lots);
+                }
+                input_price.value = "";
+            }
+
+            function refresh_count(){
+                document.querySelector(".box-list > p").innerText =
+                    "총 "+lotto_list.childElementCount+"개를 구매하였습니다.";
+            }
+            
+            function add_list(lots){
+                const li = document.createElement("li");
+                my_lots.join(lots);
+                li.setAttribute("class", "lotto");
+                li.appendChild(document.createElement("span")).innerText = '🎟️';
+                li.appendChild(document.createElement("p")).innerText = lots;
+                lotto_list.appendChild(li);
+                refresh_count();
+            }
+
+            function draw_lots(){
+                const lots = [];
+                const numbers = Array.from({length: 45}, (_, i) => i+1);
+                for (let i=0; i<6; ++i){
+                    const index = Math.floor(Math.random() * numbers.length);
+                    [numbers[index], numbers[numbers.length-1]] = [numbers[numbers.length-1], numbers[index]];
+                    lots[i] = numbers.pop();
+                }
+                return lots;
+            }
+
             function open_result(){
                 popup.style.display = "flex";
                 popup_background.style.display = "flex";
@@ -117,8 +148,18 @@
                 popup.style.display = "none";
                 popup_background.style.display = "none";
             }
+
+            function retry(){
+                my_lots.splice(0, my_lots.length);
+                document.getElementById("lottos").replaceChildren();
+                refresh_count();
+                close_result();
+            }
+
+            button_purchase.addEventListener("click", purchase);
             button_result.addEventListener("click", open_result);
             button_close.addEventListener("click", close_result);
+            button_retry.addEventListener("click", retry);
         </script>
     </body>
 </html>

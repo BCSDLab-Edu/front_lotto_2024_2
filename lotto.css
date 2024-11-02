@@ -110,17 +110,18 @@ td {
 
 .main-contents {
     display: flex;
-    justify-content:space-between;
+    justify-content:stretch;
     flex-direction: column;
     width: 414px;
-    height: 666px;
+    /* min-height: 666px; */
+    /* height: auto; */
     margin: 76px 0px 77px 0px;
     border: 1px solid #0000001F;
     padding: 32px 16px 32px 16px;
 }
 
 .main-contents > div {
-    /* margin: 0px 0px 24px 0px; */
+    margin: 0px 0px 24px 0px;
 }
 
 .main-contents > div > p {
@@ -134,7 +135,7 @@ td {
     justify-content:space-between;
 }
 
-.emoji.ticket {
+.box-list > ul > li > span {
     position: relative;
     font-size: 30px;
     font-weight: 600;
@@ -165,7 +166,7 @@ td {
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 272px;
+    top: 150px;
     left: 50%;
     width: 350px;
     height: 500px;
