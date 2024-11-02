@@ -51,7 +51,7 @@
         <div id="popup">
             <h3 id="button-close">X</h3>
             <h3>🏆 당첨 통계 🏆</h3>
-            <table>
+            <table id="table-winnings">
                 <tr>
                     <th>일치 갯수</th>
                     <th>당첨금</th>
@@ -60,30 +60,30 @@
                 <tr>
                     <td>3개</td>
                     <td>5,000</td>
-                    <td>n개</td>
+                    <td class="winnings-count">n개</td>
                 </tr>
                 <tr>
                     <td>4개</td>
                     <td>50,000</td>
-                    <td>n개</td>
+                    <td class="winnings-count">n개</td>
                 </tr>
                 <tr>
                     <td>5개</td>
                     <td>1,500,000</td>
-                    <td>n개</td>
+                    <td class="winnings-count">n개</td>
                 </tr>
                 <tr>
                     <td>5개+보너스볼</td>
                     <td>30,000,000</td>
-                    <td>n개</td>
+                    <td class="winnings-count">n개</td>
                 </tr>
                 <tr>
                     <td>6개</td>
                     <td>2,000,000,000</td>
-                    <td>n개</td>
+                    <td class="winnings-count">n개</td>
                 </tr>
             </table>
-            <span>당신의 총 수익률은 %입니다.</span>
+            <span id="earnings-rate">당신의 총 수익률은 %입니다.</span>
             <button id="button-retry">다시 시작하기</button>
         </div>
 
@@ -117,10 +117,19 @@
                 document.querySelector(".box-list > p").innerText =
                     "총 "+lotto_list.childElementCount+"개를 구매하였습니다.";
             }
+
+            function refresh_result(prize_counts, earnings_rate){
+                const winnings_count_elements = document.getElementsByClassName("winnings-count");
+                const earnings_rate_element = document.getElementById("earnings-rate");
+                for(let i=0; i<5; ++i){
+                    winnings_count_elements[i].innerText = prize_counts[i]+"개";
+                }
+                earnings_rate_element.innerText = "당신의 총 수익률은 "+earnings_rate+"%입니다.";
+            }
             
             function add_list(lots){
                 const li = document.createElement("li");
-                my_lots.join(lots);
+                my_lots.push(lots);
                 li.setAttribute("class", "lotto");
                 li.appendChild(document.createElement("span")).innerText = '🎟️';
                 li.appendChild(document.createElement("p")).innerText = lots;
@@ -149,6 +158,46 @@
                 popup_background.style.display = "none";
             }
 
+            function check_winnings(){
+                const input_numbers = document.getElementsByClassName("input-numbers");
+                const winning_numbers = [];
+                for (let i=0; i<6; ++i){
+                    winning_numbers[i] = parseInt(input_numbers[i].value);
+                }
+                const bonus_number = parseInt(input_numbers[6].value);
+                const prize_counts = [0,0,0,0,0];
+                const prizes = [5000, 50000, 1500000, 30000000, 2000000000];
+                my_lots.forEach(lots => {
+                    const winning_count = lots.filter(number => winning_numbers.includes(number)).length;
+                    switch (winning_count){
+                        case 6:
+                            ++prize_counts[4];
+                            break;
+                        case 5:
+                            if (lots.includes(bonus_number)) ++prize_counts[3];
+                            else ++prize_counts[2];
+                            break;
+                        case 4:
+                            ++prize_counts[1];
+                            break;
+                        case 3:
+                            ++prize_counts[0];
+                            break;
+                    }
+                });
+
+                const earnings = [];
+                for (let i=0; i<5; ++i){
+                    earnings[i] = prize_counts[i] * prizes[i];
+                }
+
+                const total_earnings = earnings.reduce((acc, cur) => {return acc+cur;}, 0);
+                const total_cost = (1000*my_lots.length)
+                const earnings_rate = (100 * (total_earnings / total_cost - 1)).toFixed(2);
+                refresh_result(prize_counts, earnings_rate);
+                open_result();
+            }
+
             function retry(){
                 my_lots.splice(0, my_lots.length);
                 document.getElementById("lottos").replaceChildren();
@@ -157,7 +206,7 @@
             }
 
             button_purchase.addEventListener("click", purchase);
-            button_result.addEventListener("click", open_result);
+            button_result.addEventListener("click", check_winnings);
             button_close.addEventListener("click", close_result);
             button_retry.addEventListener("click", retry);
         </script>
