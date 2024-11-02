@@ -116,6 +116,7 @@ main{
     list-style-type: none;
     padding-left: 0px;
     margin: 0px;
+    overflow-y: auto;
 }
 
 .lotto-list li{
