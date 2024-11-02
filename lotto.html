@@ -10,29 +10,30 @@
         <header>
             <h2>🎱 조윤재 로또</h2>
         </header>
-
         <div class="main-contents">
-            <div class="title">
+            <div class="box-title">
                 <h2>🎱내 번호 당첨 확인🎱</h2>
             </div>
-            <div>
+            <div class="box-purchase">
                 <p>구입할 금액을 입력해주세요.</p>
-                <input id="input-price">
-                <button id="button-purchase">구입</button>
-            </div>
-            <div>
-                <p>총 7개를 구매하였습니다.</p>
-                <div class="tickets">
-                    <p><span class="emoji ticket">🎟️</span>12, 28, 22, 37, 19, 23</p>
-                    <p><span class="emoji ticket">🎟️</span>12, 28, 22, 37, 19, 23</p>
-                    <p><span class="emoji ticket">🎟️</span>2, 28, 22, 37, 19, 23</p>
-                    <p><span class="emoji ticket">🎟️</span>12, 28, 22, 37, 19, 23</p>
-                    <p><span class="emoji ticket">🎟️</span>12, 28, 22, 37, 19, 23</p>
-                    <p><span class="emoji ticket">🎟️</span>12, 28, 22, 37, 19, 23</p>
-                    <p><span class="emoji ticket">🎟️</span>12, 28, 22, 37, 19, 23</p>
+                <div>
+                    <input id="input-price">
+                    <button id="button-purchase">구입</button>
                 </div>
             </div>
-            <div>
+            <div class="box-list">
+                <p>총 7개를 구매하였습니다.</p>
+                <ul>
+                    <li><span class="emoji ticket">🎟️</span><p>12, 28, 22, 37, 19, 23</p></li>
+                    <li><span class="emoji ticket">🎟️</span><p>12, 28, 22, 37, 19, 23</p></li>
+                    <li><span class="emoji ticket">🎟️</span><p>2, 28, 22, 37, 19, 23</p></li>
+                    <li><span class="emoji ticket">🎟️</span><p>12, 28, 22, 37, 19, 23</p></li>
+                    <li><span class="emoji ticket">🎟️</span><p>12, 28, 22, 37, 19, 23</p></li>
+                    <li><span class="emoji ticket">🎟️</span><p>12, 28, 22, 37, 19, 23</p></li>
+                    <li><span class="emoji ticket">🎟️</span><p>12, 28, 22, 37, 19, 23</p></li>
+                </ul>
+            </div>
+            <div class="box-check-winnings">
                 <p>지난 주 당첨번호 6개와 보너스 번호 1개를 입력해주세요.</p>
                 <div class="numbers">
                     <div>당첨 번호
@@ -51,10 +52,10 @@
                         </p>
                     </div>
                 </div>
+                <button id="button-result">결과 확인하기</button>
             </div>
-            <button id="button-result">결과 확인하기</button>
+            
         </div>
-
         <div id="popup">
             <h3 id="button-close">X</h3>
             <h3>🏆 당첨 통계 🏆</h3>
@@ -102,21 +103,22 @@
 
         <script>
             const button_purchase = document.getElementById("button-purchase");
+            const button_result = document.getElementById("button-result");
             const button_close = document.getElementById("button-close");
             const button_retry = document.getElementById("button-retry");
             const popup = document.getElementById("popup");
             const popup_background = document.getElementById("popup-background");
-            function open_popup(){
+            function open_result(){
                 popup.style.display = "flex";
                 popup_background.style.display = "flex";
             }
             
-            function close_popup(){
+            function close_result(){
                 popup.style.display = "none";
                 popup_background.style.display = "none";
             }
-            button_purchase.addEventListener("click", open_popup);
-            button_close.addEventListener("click", close_popup);
+            button_result.addEventListener("click", open_result);
+            button_close.addEventListener("click", close_result);
         </script>
     </body>
 </html>
