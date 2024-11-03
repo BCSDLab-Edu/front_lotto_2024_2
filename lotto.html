@@ -7,6 +7,59 @@
     <link href="style.css" rel="stylesheet" />
 </head>
 <body>
+    <div class="gray">
+        <div class="result-content">
+            <button type="button" class= "close-button">
+                <span>X</span>
+            </button>
+            <span class="subtitle">🏆 당첨 통계 🏆</span>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>일치 개수</th>
+                            <th>당첨금</th>
+                            <th>당첨 개수</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>3개</td>
+                            <td>5,000</td>
+                            <td>n개</td>
+                        </tr>
+                        <tr>
+                            <td>4개</td>
+                            <td>50,000</td>
+                            <td>n개</td>
+                        </tr>
+                        <tr>
+                            <td>5개</td>
+                            <td>1,500,000</td>
+                            <td>n개</td>
+                        </tr>
+                        <tr>
+                            <td>5개+보너스볼</td>
+                            <td>30,000,000</td>
+                            <td>n개</td>
+                        </tr>
+                        <tr>
+                            <td>6개</td>
+                            <td>2,000,000,000</td>
+                            <td>n개</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="yield-text">
+                <span>당신의 총 수익률은 %입니다.</span>
+            </div>
+            <button type="button" class="replay-button">
+                <span>다시 시작하기</span>
+            </button>
+        </div>
+    </div>
+
     <div class="title"></div>
     <div class="title-text">🎱 000 로또 만들기</div>
     
@@ -102,7 +155,7 @@
         <div class="bonus-text">보너스 번호</div>
         <input type="text" class="bonus-number" placeholder="">
         
-        <div class="resultbutton">
+        <div class="result-button">
             <button type="button" class="check-button">
                 <span>결과 확인하기</span>
             </button>
@@ -111,6 +164,6 @@
     <div class="bottom-title"></div>
     <div class="bottom-title-text">Copyright 2023. woowacourse</div>
     
-
+    <script src="./lotto.js"></script>
 </body>
 </html>

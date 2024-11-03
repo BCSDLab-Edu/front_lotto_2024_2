@@ -2,6 +2,8 @@
 
 body{ font-family: 'Roboto';}
 
+
+
 .title{
     position: fixed;
     width:1440px ;
@@ -61,7 +63,7 @@ body{ font-family: 'Roboto';}
 
 }
 
-.resultbutton{
+.result-button{
     position: relative;
     width: 382px;
     height: 36px;
@@ -105,6 +107,7 @@ body{ font-family: 'Roboto';}
 }
 
 .label{
+    display: flex;
     width: 310px;
     height: 24px;
     padding: 0px 126px 0px 0px;
@@ -112,7 +115,7 @@ body{ font-family: 'Roboto';}
 }
 
 .label span{
-    width: 184px;
+    
     height: 24px;
     gap: 0px;
     font-size: 15px;
@@ -123,6 +126,7 @@ body{ font-family: 'Roboto';}
 
 }
 .Frame2{
+    flex-grow: 1;
     width: 300px;
     height: 36px;
     padding-top:  8px;
@@ -183,8 +187,6 @@ body{ font-family: 'Roboto';}
 .Group25text span{
     width: 146px;
     height: 24px;
-    gap: 0px;
-    opacity: 0px;
     font-family: Roboto;
     font-size: 15px;
     font-weight: 400;
@@ -519,10 +521,10 @@ body{ font-family: 'Roboto';}
 }
 
 .lotto-input {
-    width: 34px; /* 입력 칸 너비 설정 */
-    height: 36px; /* 입력 칸 높이 설정 */
-    border: 1px solid #B4B4B4; /* 테두리 색상 설정 */
-    border-radius: 4px; /* 모서리 둥글게 설정 */
+    width: 34px; 
+    height: 36px; 
+    border: 1px solid #B4B4B4; 
+    border-radius: 4px; 
 
 }
 
@@ -548,6 +550,139 @@ body{ font-family: 'Roboto';}
     letter-spacing: 1.25px;
     text-align: center;
     color: #4E5BA6;
+}
+
+.gray{
+    display: none;
+    position: fixed;
+    width: 1440px;
+    height: 1024px;
+    background: #00000080;
+    z-index: 1;
+}
+
+.result-content{
+    display: none;
+    position: relative;
+    width: 350px;
+    height: 500px;
+    top: 272px;
+    left: 545px;
+    background: #FCFCFD;
+}
+
+.close-button{
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 16px;
+    left: 318px;
+    background: none;
+    border: none;
+}
+
+.close-button span{
+    font-size: 20;
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: 1.25px;
+    text-align: center;
+}
+
+.subtitle{
+    position: absolute;
+    width: 145px;
+    height: 24px;
+    top: 40px;
+    left: 94px;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0.15px;
+    text-align: center;
+}
+
+.table-container{
+    position: absolute;
+    width: 319px;
+    height: 247px;
+    top: 97px;
+    left: 16px;
+    
+
+}
+
+/* 헤더 스타일 */
+
+table{
+    border-top: 1px solid #0000001F;
+
+    text-align: center;
+    border-collapse: collapse;
+}
+
+th {
+    border-bottom: 1px solid #0000001F;
+    font-weight: bold;
+    padding: 10px; 
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    
+    
+}
+
+
+td {
+    
+
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    text-align: center;
+    border-bottom: 1px solid #0000001F;
+    padding: 8px;
+}
+
+.yield-text{
+    position: absolute;
+    width: 318px;
+    height: 24px;
+    top: 376px;
+    left: 16px;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    text-align: center;
+}
+
+.replay-button{
+    position: absolute;
+    width: 318px;
+    height: 36px;
+    top: 432px;
+    left: 16px;
+    padding: 6px 6px 6px 8px;
+    border-radius: 4px;
+    background: #4E5BA6;
+    border: none;
+}
+
+.replay-button span{
+    width: 89px;
+    height: 16px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: 1.25px;
+    text-align: left;
+    color: #FFFFFF;
 
 
 }
+
+
+
