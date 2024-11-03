@@ -132,7 +132,7 @@
                 my_lots.push(lots);
                 li.setAttribute("class", "lotto");
                 li.appendChild(document.createElement("span")).innerText = '🎟️';
-                li.appendChild(document.createElement("p")).innerText = lots;
+                li.appendChild(document.createElement("p")).innerText = lots.join(", ");
                 lotto_list.appendChild(li);
                 refresh_count();
             }
