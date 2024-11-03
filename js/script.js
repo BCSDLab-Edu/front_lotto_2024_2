@@ -87,9 +87,17 @@ buy_lottery.addEventListener('click', () => {
         const p = document.createElement("p");
         let lotteryList = [];
 
+        let overlapList = new Set;
+        //overlapList.clear();
+
         for (let i = 1; i <= 6; i++){
             let num = Math.floor(Math.random() * 45) + 1;
-            lotteryList.push(num);
+            if (overlapList.has(num)) {
+                i--;
+            } else {
+                lotteryList.push(num);
+                overlapList.add(num);
+            }
         }
 
         p.textContent = lotteryList.join(", ");
@@ -210,7 +218,7 @@ function isExist(){
         if (input.value === "") {
             return false;
         }
-    })
+    });
     if (document.getElementById('bonus_target').querySelector('#bonus_target input').value === ""){
         return false;
     }
