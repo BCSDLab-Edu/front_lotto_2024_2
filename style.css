@@ -1,0 +1,688 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body{ font-family: 'Roboto';}
+
+
+
+.title{
+    position: fixed;
+    width:1440px ;
+    height: 64px;
+    border: 1px solid;
+    border-bottom: 1px solid #4E5BA633  ;
+    background-color:#4E5BA6;
+}
+
+.title-text{
+    position: fixed;
+    width: 100%;
+    height: 36px;
+    top: 14px;
+    left: 130px;
+    font-family: Roboto;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 36px;
+    text-align: left;
+    color: #FFFFFF;
+
+
+}
+
+
+
+.background{
+    position: relative;
+    width: 414px;
+    height: 727px;
+    top: 140px;
+    left: 513px;
+    border-radius: 4px;
+    background-color:  #FFFFFF;
+}
+.main-title{
+    position: absolute;
+    width: 382px;
+    height: 24px;
+    top: 52px;
+    left: 16px;
+    gap: 0px;
+    opacity: 0px;
+    color: #000000;
+    text-align: center;
+}
+
+
+.main-title span{
+    font-family: Roboto;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0.15000000596046448px;
+    
+
+}
+
+.result-button{
+    position: relative;
+    width: 382px;
+    height: 36px;
+    top: 659px;
+    left: 16px;
+    padding: 6px 6px 6px 8px;
+    border-radius: 4px;
+    background-color: #4E5BA6;
+}
+
+
+.check-button{
+    width : 100%; /* 버튼 너비 */
+    height: 100%; /* 버튼 높이 */
+    background-color: #4E5BA6; /* 버튼 배경색 */
+    border: none; /* 테두리 제거 */
+    border-radius: 4px !important; /* 모서리 둥글게 */
+    color: #FFFFFF; /* 텍스트 색상 */
+    font-size: 16px; /* 글자 크기 설정 */
+    font-weight: 700; /* 글자 굵기 설정 */
+    cursor: pointer; /* 마우스 커서 모양 변경 */
+    display: inline-block;
+}
+
+.input{
+    position: absolute;
+    width: 382px;
+    height: 64px;
+    top: 104px;
+    left: 16px;
+
+}
+.input-label{
+    position:absolute;
+    width: 100%;
+    height: 64px;
+    top: 104px;
+    left: 16px;
+    gap: 4px;
+
+}
+
+.label{
+    display: flex;
+    width: 310px;
+    height: 24px;
+    padding: 0px 126px 0px 0px;
+    gap: 0px; 
+}
+
+.label span{
+    
+    height: 24px;
+    gap: 0px;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    text-align: left;
+
+}
+.Frame2{
+    flex-grow: 1;
+    width: 300px;
+    height: 36px;
+    padding-top:  8px;
+    padding-right: 8px;
+    padding-left: 8px;
+    gap: 10px;
+    border-radius: 4px;
+    border: 1px solid #B4B4B4
+
+}
+
+
+.Frame2 input{
+    width: 285px;
+    height: 24px;
+    border: none;
+    outline: none;
+    
+    
+
+}
+.purchase-button{
+    position: absolute;
+    width: 56px;
+    height: 36px;
+    top: 28px;
+    left: 326px;
+    padding: 6px 6px 6px 8px;
+    gap: 0px;
+    border-radius: 4px;
+}
+
+.Group16{
+    position: absolute;
+    width: 310px;
+    height: 24px;
+    top: 196px;
+    left: 16px;
+}
+
+
+.Group25{
+    position: absolute;
+    width: 238px;
+    height: 36px;
+    top: 228px;
+    left: 16px;
+}
+
+.Group25text{
+    width: 196px;
+    height: 24px;
+    top: 232px;
+    left: 58px;
+    
+}
+
+.Group25text span{
+    width: 146px;
+    height: 24px;
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    text-align: left;
+}
+
+.Body3{
+    width: 34px;
+    height: 36px;
+    left: 16px;
+    top: 228px;
+    font-family: Roboto;
+    font-size: 34px;
+    font-weight: 600;
+    line-height: 36px;
+    text-align: left;
+}
+
+.Group26{
+    position: absolute;
+    width: 238px;
+    height: 36px;
+    top: 268px;
+    left: 16px;
+}
+
+.Group26text{
+    width: 196px;
+    height: 24px;
+    top: 232px;
+    left: 58px;
+    
+}
+
+.Group26text span{
+    width: 146px;
+    height: 24px;
+    gap: 0px;
+    opacity: 0px;
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    text-align: left;
+}
+
+.Body4{
+    width: 34px;
+    height: 36px;
+    left: 16px;
+    top: 228px;
+    font-family: Roboto;
+    font-size: 34px;
+    font-weight: 600;
+    line-height: 36px;
+    text-align: left;
+}
+
+.Group27{
+    position: absolute;
+    width: 238px;
+    height: 36px;
+    top: 308px;
+    left: 16px;
+}
+
+.Group27text{
+    width: 196px;
+    height: 24px;
+    top: 232px;
+    left: 58px;
+    
+}
+
+.Group27text span{
+    width: 146px;
+    height: 24px;
+    gap: 0px;
+    opacity: 0px;
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    text-align: left;
+}
+
+.Body5{
+    width: 34px;
+    height: 36px;
+    left: 16px;
+    top: 228px;
+    font-family: Roboto;
+    font-size: 34px;
+    font-weight: 600;
+    line-height: 36px;
+    text-align: left;
+}
+
+.Group28{
+    position: absolute;
+    width: 238px;
+    height: 36px;
+    top: 345px;
+    left: 16px;
+}
+
+.Group28text{
+    width: 196px;
+    height: 24px;
+    top: 232px;
+    left: 58px;
+    
+}
+
+.Group28text span{
+    width: 146px;
+    height: 24px;
+    gap: 0px;
+    opacity: 0px;
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    text-align: left;
+}
+
+.Body6{
+    width: 34px;
+    height: 36px;
+    left: 16px;
+    top: 228px;
+    font-family: Roboto;
+    font-size: 34px;
+    font-weight: 600;
+    line-height: 36px;
+    text-align: left;
+}
+
+.Group29{
+    position: absolute;
+    width: 238px;
+    height: 36px;
+    top: 388px;
+    left: 16px;
+}
+
+.Group29text{
+    width: 196px;
+    height: 24px;
+    top: 232px;
+    left: 58px;
+    
+}
+
+.Group29text span{
+    width: 146px;
+    height: 24px;
+    gap: 0px;
+    opacity: 0px;
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    text-align: left;
+}
+
+.Body7{
+    width: 34px;
+    height: 36px;
+    left: 16px;
+    top: 228px;
+    font-size: 34px;
+    font-weight: 600;
+    line-height: 36px;
+    text-align: left;
+}
+
+.Group30{
+    position: absolute;
+    width: 238px;
+    height: 36px;
+    top: 428px;
+    left: 16px;
+}
+
+.Group30text{
+    width: 196px;
+    height: 24px;
+    top: 232px;
+    left: 58px;
+    
+}
+
+.Group30text span{
+    width: 146px;
+    height: 24px;
+    gap: 0px;
+    opacity: 0px;
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    text-align: left;
+}
+
+.Body8{
+    width: 34px;
+    height: 36px;
+    left: 16px;
+    top: 228px;
+    font-size: 34px;
+    font-weight: 600;
+    line-height: 36px;
+    text-align: left;
+}
+
+.Group31{
+    position: absolute;
+    width: 238px;
+    height: 36px;
+    top: 468px;
+    left: 16px;
+}
+
+.Group31text{
+    width: 196px;
+    height: 24px;
+    top: 232px;
+    left: 58px;
+    
+}
+
+.Group31text span{
+    width: 146px;
+    height: 24px;
+    gap: 0px;
+    opacity: 0px;
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    text-align: left;
+}
+
+.Body9{
+    width: 34px;
+    height: 36px;
+    left: 16px;
+    top: 228px;
+    font-size: 34px;
+    font-weight: 600;
+    line-height: 36px;
+    text-align: left;
+}
+
+.winninglotto{
+    position: absolute;
+    width: 382px;
+    height: 24px;
+    top: 528px;
+    left: 16px;
+}
+
+.winninglotto span{
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    text-align: left;
+}
+
+.bonus-text{
+    position: absolute;
+    width: 76px;
+    height: 24px;
+    top: 564px;
+    left: 322px;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    text-align: right;
+}
+
+.bonus-number{
+    position: absolute;
+    width: 34px;
+    height: 36px;
+    top: 596px;
+    left: 364px;
+    gap: 0px;
+    border-radius: 4px;
+    border: 1px solid #B4B4B4
+}
+
+.numbertext{
+    position: absolute;
+    width: auto;
+    height: 24px;
+    top: 564px;
+    left: 16px;
+}
+
+.numbertext span{
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    text-align: left;
+}
+
+.lotto-inputs {
+    position: absolute;
+    width: auto;
+    height: 36px;
+    top: 596px;
+    left: 16px;
+    gap: 0px;
+    border-radius: 4px 0px 0px 0px;
+    border: 1px 0px 0px 0px;
+    opacity: 0px;
+
+}
+
+.lotto-input {
+    width: 34px; 
+    height: 36px; 
+    border: 1px solid #B4B4B4; 
+    border-radius: 4px; 
+
+}
+
+.bottom-title{
+    position: fixed;
+    width: 1440px;
+    height: 80px;
+    top: 944px;
+    border: solid 1px;
+    border-top: 1px solid #4E5BA633
+}
+
+.bottom-title-text{
+    position: fixed;
+    width: auto;
+    height: 16px;
+    top: 976px;
+    left: 608px;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: 1.25px;
+    text-align: center;
+    color: #4E5BA6;
+}
+
+.gray{
+    display: none;
+    position: fixed;
+    width: 1440px;
+    height: 1024px;
+    background: #00000080;
+    z-index: 1;
+}
+
+.result-content{
+    display: none;
+    position: relative;
+    width: 350px;
+    height: 500px;
+    top: 272px;
+    left: 545px;
+    background: #FCFCFD;
+}
+
+.close-button{
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 16px;
+    left: 318px;
+    background: none;
+    border: none;
+}
+
+.close-button span{
+    font-size: 20;
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: 1.25px;
+    text-align: center;
+}
+
+.subtitle{
+    position: absolute;
+    width: 145px;
+    height: 24px;
+    top: 40px;
+    left: 94px;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0.15px;
+    text-align: center;
+}
+
+.table-container{
+    position: absolute;
+    width: 319px;
+    height: 247px;
+    top: 97px;
+    left: 16px;
+    
+
+}
+
+/* 헤더 스타일 */
+
+table{
+    border-top: 1px solid #0000001F;
+
+    text-align: center;
+    border-collapse: collapse;
+}
+
+th {
+    border-bottom: 1px solid #0000001F;
+    font-weight: bold;
+    padding: 10px; 
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    
+    
+}
+
+
+td {
+    
+
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    text-align: center;
+    border-bottom: 1px solid #0000001F;
+    padding: 8px;
+}
+
+.yield-text{
+    position: absolute;
+    width: 318px;
+    height: 24px;
+    top: 376px;
+    left: 16px;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    text-align: center;
+}
+
+.replay-button{
+    position: absolute;
+    width: 318px;
+    height: 36px;
+    top: 432px;
+    left: 16px;
+    padding: 6px 6px 6px 8px;
+    border-radius: 4px;
+    background: #4E5BA6;
+    border: none;
+}
+
+.replay-button span{
+    width: 89px;
+    height: 16px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: 1.25px;
+    text-align: left;
+    color: #FFFFFF;
+
+
+}
+
+
+
