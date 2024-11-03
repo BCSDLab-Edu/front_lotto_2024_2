@@ -1,94 +1,172 @@
 <!DOCTYPE html>
 <html lang="ko">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>lotto</title>
-        <link href = "lottoStyle.css" rel = "stylesheet" />
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    </head>
-    <body>
-        <div class="header_b">
-            <div class="header">
-                <span>🎱 000 로또</span>
-            </div>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lotto</title>
+    <link href = "lottoStyle.css" rel = "stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnet" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <script src="./lotto.js" defer></script>
+  </head>
+  <body>
+    <div id="headerBox">
+      <div id="header">
+        <span>🎱 행운의 로또</span>
+      </div>
+    </div>
+    <div id="bottomBox">
+      <div id="bottom">
+        <span>Copyright 2023. woowacourse</span>
+      </div>
+    </div>
+    <div id="mainBox">
+      <div id="mainHeader">
+        <span>🎱 내 번호 당첨 확인 🎱</span>
+      </div>
+      <div id="buyTicketBox">
+        <div id="moneyInputBox">
+          <div id="moneyInputText">
+            <span>구입할 금액을 입력해주세요.</span>
+          </div>
+          <div id="moneyInput">
+            <input type="text" id="money" placeholder="금액">
+          </div>
         </div>
-        <div class="bottom_b">
-            <div class="bottom">
-                <span>Copyright 2023. woowacourse</span>
-            </div>
+        <input type = "button" value="구입" id="buyButton">
+      </div>
+      <div id="ticketCount">
+        <span>총 7개를 구매하였습니다.</span>
+      </div>
+      <div id="ticketList">
+        <div id="ticket">
+          <span>🎟️</span>
         </div>
-        <div class="main">
-            <div class="main_h">
-                <span>🎱 내 번호 당첨 확인 🎱</span>
-            </div>
-            <div class="mInput_b">
-                <div class="mIputTI">
-                    <div class="mInputT">
-                        <span>구입할 금액을 입력해주세요.</span>
-                    </div>
-                    <div class="mInputI">
-                        <input type="text" placeholder="금액"><br>
-                    </div>
-                </div>
-                <button type="button">구입</button>
-            </div>
-            <div class="ticket_n">
-                <span>총 7개를 구매하였습니다.</span>
-            </div>
-            <div class="ticket_b">
-                <div class="ticket1">
-                    <span>🎟️</span>
-                    <p>12, 28, 22, 37, 19, 23</p>
-                </div>
-                <div class="ticket2">
-                    <span>🎟️</span>
-                    <p>12, 28, 22, 37, 19, 23</p>
-                </div>
-                <div class="ticket3">
-                    <span>🎟️</span>
-                    <p>2, 28, 22, 37, 19, 23</p>
-                </div>
-                <div class="ticket4">
-                    <span>🎟️</span>
-                    <p>12, 28, 22, 37, 19, 23</p>
-                </div>
-                <div class="ticket5">
-                    <span>🎟️</span>
-                    <p>12, 28, 22, 37, 19, 23</p>
-                </div>
-                <div class="ticket6">
-                    <span>🎟️</span>
-                    <p>12, 28, 22, 37, 19, 23</p>
-                </div>
-                <div class="ticket7">
-                    <span>🎟️</span>
-                    <p>12, 28, 22, 37, 19, 23</p>
-                </div>
-            </div>
-            <div class="win_b">
-                <span>지난 주 당첨번호 6개와 보너스 번호 1개를 입력해주세요.</span>
-                <div class="win_n">
-                    <span>당첨 번호</span>
-                </div>
-                <div class="win_nInput">
-                    <input type="text"></input>
-                    <input type="text"></input>
-                    <input type="text"></input>
-                    <input type="text"></input>
-                    <input type="text"></input>
-                    <input type="text"></input>
-                </div>
-                <div class="bonus_n">
-                    <span>보너스 번호</span>
-                </div>
-                <div class="bonus_nInput">
-                    <input type="text"></input>
-                </div>
-            </div>
-            <button type="button">결과 학인하기</button>
+        <div id="ticket2">
+          <span>🎟️</span>
+          <p>12, 28, 22, 37, 19, 23</p>
         </div>
-    </body>
+        <div id="ticket3">
+          <span>🎟️</span>
+          <p>2, 28, 22, 37, 19, 23</p>
+        </div>
+        <div id="ticket4">
+          <span>🎟️</span>
+          <p>12, 28, 22, 37, 19, 23</p>
+        </div>
+        <div id="ticket5">
+          <span>🎟️</span>
+          <p>12, 28, 22, 37, 19, 23</p>
+        </div>
+        <div id="ticket6">
+          <span>🎟️</span>
+          <p>12, 28, 22, 37, 19, 23</p>
+        </div>
+        <div id="ticket7">
+          <span>🎟️</span>
+          <p>12, 28, 22, 37, 19, 23</p>
+        </div>
+      </div>
+      <div id="resultCheck">
+        <span>지난 주 당첨번호 6개와 보너스 번호 1개를 입력해주세요.</span>
+        <div id="resultCheckText">
+          <span>당첨 번호</span>
+        </div>
+        <div id="numberInput">
+          <input type="text">
+          <input type="text">
+          <input type="text"
+          <input type="text">
+          <input type="text">
+          <input type="text">
+        </div>
+        <div id="bonusNumberText">
+          <span>보너스 번호</span>
+        </div>
+        <div id="bonusNumberInput">
+          <input type="text">
+        </div>
+      </div>
+      <input type = "button" value="결과 확인하기" id="resultButton">
+    </div>
+    <div id="resultOutBox">
+      <div id="resultBox">
+        <div id="exit">
+          <span>X</span>
+        </div>
+        <div id="winningStatistics">
+          <span>🏆 당첨 통계 🏆</span>
+        </div>
+        <div id="line1"></div>
+        <div id="winningStatisticsList">
+          <div id="NumberOfMatchesBox">
+            <span>일치 갯수</span>
+          </div>
+          <div id="winningAmountBox">
+            <span id >당첨금</span>
+          </div>
+          <div id="NumberOfWinningsBox">
+            <span>당첨 갯수</span>
+          </div>
+          <div id="line2"></div>
+          <div id="NumberOfMatches1">
+            <span>3개</span>
+          </div>
+          <div id="winningAmount1">
+            <span>5,000</span>
+          </div>
+          <div id="NumberOfWinnings1">
+            <span>n개</span>
+          </div>
+          <div id="line3"></div>
+          <div id="NumberOfMatches2">
+            <span>4개</span>
+          </div>
+          <div id="winningAmount2">
+            <span>50,000</span>
+          </div>
+          <div id="NumberOfWinnings2">
+            <span>n개</span>
+          </div>
+          <div id="line4"></div>
+          <div id="NumberOfMatches3">
+            <span>5개</span>
+          </div>
+          <div id="winningAmount3">
+            <span>1,500,000</span>
+          </div>
+          <div id="NumberOfWinnings3">
+            <span>n개</span>
+          </div>
+          <div id="line5"></div>
+          <div id="NumberOfMatches4">
+            <span>5개+보너스볼</span>
+          </div>
+          <div id="winningAmount4">
+            <span>30,000,000</span>
+          </div>
+          <div id="NumberOfWinnings4">
+            <span>n개</span>
+          </div>
+          <div id="line6"></div>
+          <div id="NumberOfMatches5">
+            <span>6개</span>
+          </div>
+          <div id="winningAmount5">
+            <span>2,000,000,000</span>
+          </div>
+          <div id="NumberOfWinnings5">
+            <span>n개</span>
+          </div>
+          <div id="line7"></div>
+        </div>
+        <div id="earningsRate">
+          <span>당신의 총 수익률은 %입니다.</span>
+        </div>
+        <input type = "button" value="다시 시작하기" id="retry">
+      </div>
+    </div>
+  </body>
 </html>
+EOF;
