@@ -2,6 +2,7 @@ body {
     margin: 0;
     position:relative; 
     height: 100vh;
+    font-family: 'Roboto';
 }
 
 .rectangle {
@@ -72,13 +73,12 @@ body {
 }
 
 
-.input{
+.input-wrapper{
     width: 310px; /*310px*/
     height: 64px; /*64px*/
     position: absolute; 
     top: 104px; 
     left: 16px;
-    opacity: 1;
 }
 
 label{
@@ -143,6 +143,7 @@ input::placeholder{
 }
 
 .num{
+    list-style: none;
     margin-top: 5px;
     font-family: 'Roboto';
     font-size: 15px;
@@ -184,10 +185,6 @@ input::placeholder{
     font-weight: 400;
     color: #000000;
     white-space: nowrap;
-}
-
-.correctnum{
-    
 }
 
 .correctnum-title{
@@ -269,3 +266,166 @@ input::placeholder{
     align-items: center;
 }
 
+.pop-result{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 1000; 
+}
+
+.pop-inner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    height: 550px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.pop-title-f{
+    display: flex;
+    justify-content: center;
+    
+    left: 16px;
+    font-family: 'Roboto';
+    font-size: 20px;
+}
+
+.pop-winning-result{
+    display: flex;
+    justify-content: center;
+    width: 419px;
+    height: 400px;
+    position: relative;
+    
+    left: 20px;
+    gap: 0px;
+    opacity: 0px;
+    flex-direction: column;
+}
+
+.pop-winning-type-group{
+    display: flex;
+    justify-content: space-around;
+    width: 380px;
+    height: 50px;
+    border-top: rgb(0,0,0) 1px solid;
+}
+
+.pop-winning-3{
+    display: flex;
+    justify-content: space-around;
+    width: 380px;
+    height: 50px;
+    border-top: rgb(0,0,0) 1px solid;
+}
+
+.pop-winning-4{
+    display: flex;
+    justify-content: space-around;
+    width: 380px;
+    height: 50px;
+    border-top: rgb(0,0,0) 1px solid;
+}
+
+.pop-winning-5{
+    display: flex;
+    justify-content: space-around;
+    width: 380px;
+    height: 50px;
+    border-top: rgb(0,0,0) 1px solid;
+}
+
+.pop-winning-5b{
+    display: flex;
+    justify-content: space-around;
+    width: 380px;
+    height: 50px;
+    border-top: rgb(0,0,0) 1px solid;
+}
+
+.pop-winning-6{
+    display: flex;
+    justify-content: space-around;
+    width: 380px;
+    height: 50px;
+    border-top: rgb(0,0,0) 1px solid;
+}
+
+.num-type{
+    width: 100px;
+    display: flex;
+    font-family: 'Roboto';
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    text-align: center;
+    margin-top: 10px;
+    justify-content: center;
+}
+
+.winning-money{
+    width: 100px;
+    display: flex;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    text-align: center;
+    margin-top: 10px;
+    justify-content: center;
+}
+
+.winning-count{
+    width: 100px;
+    display: flex;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    text-align: center;
+    margin-top: 10px;
+    justify-content: center;
+}
+
+.profit{
+    display: flex;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.restart{
+    width: 382px;
+    height: 36px;
+    background-color: #4E5BA6;
+    color: white;
+    font-size: 14px;
+    font-family: 'Roboto';
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+}
+
+.close{
+    position: relative;
+    left: 200px;
+    top: -30px;
+}
