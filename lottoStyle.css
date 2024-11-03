@@ -1,0 +1,921 @@
+body{
+  margin:0px;
+  background-color: #FCFCFD;
+}
+
+#headerBox{
+  width: 1440px;
+  height: 64px;
+  border-bottom: 1px solid #4E5BA633;
+  background-color: #4E5BA6;
+}
+
+#header{
+  width: 165px;
+  height: 36px;
+  position: absolute;
+  top:14px;
+  left:130px;
+  color: #FFFFFF;
+}
+
+#header span{
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+}
+
+#bottomBox{
+  width: 1440px;
+  height: 64px;
+  border-top: 1px solid #4E5BA633;
+  position: absolute;
+  top: 944px;
+}
+
+#bottom{
+  width: 224px;
+  height: 16px;
+  position: absolute;
+  top: 32px;
+  left: 608px;
+  color: #4E5BA6;
+}
+
+#bottom span{
+  letter-spacing: 1.15px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+#mainBox{
+  width: 414px;
+  height: 727px;
+  position: absolute;
+  top: 140px;
+  left: 513px;
+  border-radius: 4px;
+  border: 1px solid #B4B4B4;
+}
+
+#mainHeader{
+  width: 382px;
+  height: 24px;
+  position: relative;
+  top: 52px;
+  left: 16px;
+  text-align: center;
+}
+
+#mainHeader span{
+  font-family: "Roboto", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 24px;
+  text-align: center;
+}
+
+#resultButton{
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 1.25px;
+  background-color: #4E5BA6;
+  color: #FFFFFF;
+  position: absolute;
+  top: 659px;
+  left: 16px;
+  padding: 6px 6px 6px 8px;
+  width: 382px;
+  height: 36px;
+  border-radius: 4px;
+}
+
+#buyTicketBox{
+  width: 382px;
+  height: 64px;
+  position: absolute;
+  left: 16px;
+  top: 104px;
+}
+
+#moneyInputBox{
+  width: 310px;
+  height: 64px;
+  top: 321px;
+  left: 540px;
+}
+
+#moneyInputText{
+  width: 310px;
+  height: 24px;
+}
+
+#moneyInputText span{
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  text-align: left;
+}
+
+#moneyInput{
+  width: 293px;   /*padding값 고려해서 16px, border값인 1px 빼줌*/
+  height: 27px;   /*padding값 8px만큼 빼줌*/
+  padding:8px 8px 0px 8px;
+  border-radius: 4px;
+  border: 1px solid #B4B4B4;
+  margin-top: 4px;
+}
+
+#moneyInput money{
+  width: 290px;
+  height: 24px;
+}
+
+#buyButton{
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  text-align: center;
+  background-color: #4E5BA6;
+  color: #FFFFFF;
+  position: absolute;
+  top: 28px;
+  left: 326px;
+  padding: 6px 6px 6px 8px;
+  width: 56px;
+  height: 36px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#ticketCount{
+  width: 310px;
+  height: 24px;
+  position: absolute;
+  top: 196px;
+  left: 16px;
+}
+
+#ticketList{
+  width: 238px;
+  height: 276px;
+  position: absolute;
+  top: 228px;
+  left: 16px;
+  flex-direction: column;
+}
+
+#ticket1{
+  width: 238px;
+  height: 36px;
+  margin-left: -5px;
+  display: flex;
+  align-items: center;
+  margin: 4px;
+}
+
+#ticket1 span{
+  display: inline;
+  width: 34px;
+  height: 36px;
+  font-family: "Roboto", sans-serif;
+  font-size: 34px;
+  font-weight: 600;
+  line-height: 36px;
+  margin: 0px;
+}
+
+#ticket1 p{
+  display: inline;
+  width: 146px;
+  height: 24px;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  margin: 15px;
+}
+
+#ticket2{
+  width: 238px;
+  height: 36px;
+  margin-left: -5px;
+  display: flex;
+  align-items: center;
+  margin: 4px;
+}
+
+#ticket2 span{
+  display: inline;
+  width: 34px;
+  height: 36px;
+  font-family: "Roboto", sans-serif;
+  font-size: 34px;
+  font-weight: 600;
+  line-height: 36px;
+  margin: 0px;
+}
+
+#ticket2 p{
+  display: inline;
+  width: 146px;
+  height: 24px;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  margin: 15px;
+}
+
+#ticket3{
+  width: 238px;
+  height: 36px;
+  margin-left: -5px;
+  display: flex;
+  align-items: center;
+  margin: 4px;
+}
+
+#ticket3 span{
+  display: inline;
+  width: 34px;
+  height: 36px;
+  font-family: "Roboto", sans-serif;
+  font-size: 34px;
+  font-weight: 600;
+  line-height: 36px;
+  margin: 0px;
+}
+
+#ticket3 p{
+  display: inline;
+  width: 146px;
+  height: 24px;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  margin: 15px;
+}
+
+#ticket4{
+  width: 238px;
+  height: 36px;
+  margin-left: -5px;
+  display: flex;
+  align-items: center;
+  margin: 4px;
+}
+
+#ticket4 span{
+  display: inline;
+  width: 34px;
+  height: 36px;
+  font-family: "Roboto", sans-serif;
+  font-size: 34px;
+  font-weight: 600;
+  line-height: 36px;
+  margin: 0px;
+}
+
+#ticket4 p{
+  display: inline;
+  width: 146px;
+  height: 24px;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  margin: 15px;
+}
+
+#ticket5{
+  width: 238px;
+  height: 36px;
+  margin-left: -5px;
+  display: flex;
+  align-items: center;
+  margin: 4px;
+}
+
+#ticket5 span{
+  display: inline;
+  width: 34px;
+  height: 36px;
+  font-family: "Roboto", sans-serif;
+  font-size: 34px;
+  font-weight: 600;
+  line-height: 36px;
+  margin: 0px;
+}
+
+#ticket5 p{
+  display: inline;
+  width: 146px;
+  height: 24px;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  margin: 15px;
+}
+
+#ticket6{
+  width: 238px;
+  height: 36px;
+  margin-left: -5px;
+  display: flex;
+  align-items: center;
+  margin: 4px;
+}
+
+#ticket6 span{
+  display: inline;
+  width: 34px;
+  height: 36px;
+  font-family: "Roboto", sans-serif;
+  font-size: 34px;
+  font-weight: 600;
+  line-height: 36px;
+  margin: 0px;
+}
+
+#ticket6 p{
+  display: inline;
+  width: 146px;
+  height: 24px;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  margin: 15px;
+}
+
+#ticket7 {
+  width: 238px;
+  height: 36px;
+  margin-left: -5px;
+  display: flex;
+  align-items: center;
+  margin: 4px;
+}
+
+#ticket7 span{
+  display: inline;
+  width: 34px;
+  height: 36px;
+  font-family: "Roboto", sans-serif;
+  font-size: 34px;
+  font-weight: 600;
+  line-height: 36px;
+  margin: 0px;
+}
+
+#ticket7 p{
+  display: inline;
+  width: 146px;
+  height: 24px;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  margin: 15px;
+}
+
+#resultCheck{
+  width: 382px;
+  height: 104px;
+  position: absolute;
+  top: 528px;
+  left: 16px;
+}
+
+#resultCheck span{
+  width: 382px;
+  height: 24px;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+}
+
+#resultCheckText span{
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  width: 64px;
+  height: 24px;
+  position: absolute;
+  top: 36px;
+}
+
+#numberInput{
+  display: flex;
+  flex-direction: row;
+  gap: 7.5px;
+  width: 244px;
+  height: 36px;
+  position: absolute;
+  top: 68px;
+}
+
+#numberInput input{
+  width: 33px;
+  height: 35px;
+  border-radius: 4px;
+  border: 1px solid #B4B4B4;
+  padding: 0px;
+}
+
+#bonusNumberText span{
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  width: 80px;
+  height: 24px;
+  position: absolute;
+  top: 36px;
+  left: 306px;
+}
+
+#bonusNumberInput{
+  width: 76px;
+  height: 68px;
+  position: absolute;
+  top: 68px;
+  left: 348px;
+}
+
+#bonusNumberInput input{
+  width: 33px;
+  height: 35px;
+  border-radius: 4px;
+  border: 1px solid #B4B4B4;
+}
+
+#resultOutBox{
+  display: none;
+  position: fixed;
+  width: 100%; 
+  height: 100%; 
+  background-color: rgba(0, 0, 0, 0.5); 
+  z-index: 1s;
+}
+
+#resultBox{
+  width: 350px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 272px;
+  left: 545px;
+  background-color: #FFFFFFFF;
+  border-radius: 4px;
+  border: 1px solid #B4B4B4;
+}
+
+#exit{
+  width: 16px;
+  height: 16px;
+  position: fixed;
+  top: 288px;
+  left: 863px;
+  text-align: center;
+  cursor: pointer;
+}
+
+#exit span{
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 16px;
+}
+
+#winningStatistics{
+  width:319px;
+  height:24px;
+  position: fixed;
+  top: 312px;
+  left: 561px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+#winningStatistics span{
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+#winninfStatisticsList{
+  width: 319px;
+  height: 247px;
+  position: fixed;
+  top: 369px;
+  left: 561px;
+}
+
+#line1{
+  width: 318px;
+  height: 1px;
+  position: fixed;
+  top: 369px;
+  left: 561px;
+  background-color: #0000001F;
+}
+
+#NumberOfMatchesBox{
+  width: 96px;
+  height: 24px;
+  position: fixed;
+  top: 378px;
+  left: 561px;
+  text-align: center;
+}
+
+#NumberOfMatchesBox span{
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+#winningAmountBox{
+  width: 134px;
+  height: 24px;
+  position: fixed;
+  top: 378px;
+  left: 665px;
+  text-align: center;
+}
+
+#winningAmountBox span{
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+#NumberOfWinningsBox{
+  width: 72px;
+  height: 24px;
+  position: fixed;
+  top: 378px;
+  left: 807px;
+  text-align: center;
+}
+
+#NumberOfWinningsBox span{
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+#line2{
+  width: 318px;
+  height: 1px;
+  position: fixed;
+  top: 410px;
+  left: 561px;
+  background-color: #0000001F;
+}
+
+#NumberOfMatches1{
+  width: 96px;
+  height: 24px;
+  position: fixed;
+  top: 419px;
+  left: 562px;
+  text-align: center;
+}
+
+#NumberOfMatches1 span{
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+#winningAmount1{
+  width: 134px;
+  height: 24px;
+  position: fixed;
+  top: 419px;
+  left: 665px;
+  text-align: center;
+}
+
+#winningAmount1 span{
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+#NumberOfWinnings1{
+  width: 72px;
+  height: 24px;
+  position: fixed;
+  top: 419px;
+  left: 808px;
+  text-align: center;
+}
+
+#NumberOfWinnings1 span{
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+#line3{
+  width: 318px;
+  height: 1px;
+  position: fixed;
+  top: 451px;
+  left: 561px;
+  background-color: #0000001F;
+}
+
+#NumberOfMatches2{
+  width: 96px;
+  height: 24px;
+  position: fixed;
+  top: 460px;
+  left: 561px;
+  text-align: center;
+}
+
+#NumberOfMatches2 span{
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+#winningAmount2{
+  width: 134px;
+  height: 24px;
+  position: fixed;
+  top: 460px;
+  left: 664px;
+  text-align: center;
+}
+
+#winningAmount2 span{
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+#NumberOfWinnings2{
+  width: 72px;
+  height: 24px;
+  position: fixed;
+  top: 460px;
+  left: 807px;
+  text-align: center;
+}
+
+#NumberOfWinnings2 span{
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+#line4{
+  width: 318px;
+  height: 1px;
+  position: fixed;
+  top: 492px;
+  left: 561px;
+  background-color: #0000001F;
+}
+
+#NumberOfMatches3{
+  width: 96px;
+  height: 24px;
+  position: fixed;
+  top: 501px;
+  left: 561px;
+  text-align: center;
+}
+
+#NumberOfMatches3 span{
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+#winningAmount3{
+  width: 134px;
+  height: 24px;
+  position: fixed;
+  top: 501px;
+  left: 664px;
+  text-align: center;
+}
+
+#winningAmount3 span{
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+#NumberOfWinnings3{
+  width: 72px;
+  height: 24px;
+  position: fixed;
+  top: 501px;
+  left: 807px;
+  text-align: center;
+}
+
+#NumberOfWinnings3 span{
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+#line5{
+  width: 318px;
+  height: 1px;
+  position: absolute;
+  top: 261px;
+  left: 16px;
+  background-color: #0000001F;
+}
+
+#NumberOfMatches4{
+  width: 96px;
+  height: 24px;
+  position: fixed;
+  top: 542px;
+  left: 561px;
+  text-align: center;
+}
+
+#NumberOfMatches4 span{
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+#winningAmount4{
+  width: 134px;
+  height: 24px;
+  position: fixed;
+  top: 542px;
+  left: 664px;
+  text-align: center;
+}
+
+#winningAmount4 span{
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+#NumberOfWinnings4{
+  width: 72px;
+  height: 24px;
+  position: fixed;
+  top: 542px;
+  left: 807px;
+  text-align: center;
+}
+
+#NumberOfWinnings4 span{
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+#line6{
+  width: 318px;
+  height: 1px;
+  position: fixed;
+  top: 574px;
+  left: 561px;
+  background-color: #0000001F;
+}
+
+#NumberOfMatches5{
+  width: 96px;
+  height: 24px;
+  position: fixed;
+  top: 583px;
+  left: 561px;
+  text-align: center;
+}
+
+#NumberOfMatches5 span{
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+#winningAmount5{
+  width: 134px;
+  height: 24px;
+  position: fixed;
+  top: 583px;
+  left: 664px;
+  text-align: center;
+}
+
+#winningAmount5 span{
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+#NumberOfWinnings5{
+  width: 72px;
+  height: 24px;
+  position: fixed;
+  top: 583px;
+  left: 807px;
+  text-align: center;
+}
+
+#NumberOfWinnings5 span{
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+#line7{
+  width: 318px;
+  height: 1px;
+  position: absolute;
+  top: 343px;
+  left: 16px;
+  background-color: #0000001F;
+}
+
+#earningsRate{
+  width: 318px;
+  height: 24px;
+  position: fixed;
+  top: 648px;
+  left: 561px;
+  text-align: center;
+}
+
+#earningsRate span{
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+#retry{
+  font-family: "Roboto", sans-serif;
+  width: 318px;
+  height: 36px;
+  position: fixed;
+  top: 704px;
+  left: 561px;
+  padding: 6px 6px 6px 8px;
+  border-radius: 4px;
+  text-align: center;
+  background-color: #4E5BA6;
+  color: #FFFFFF;
+  cursor: pointer;
+}
