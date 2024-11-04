@@ -5,7 +5,6 @@ import './css/lotto.css';
 import './css/modal.css';
 
 
-
 const $purchaseButton = document.getElementsByClassName("purchase-button")[0];
 const $purchasemoney=document.getElementsByClassName("purchase-money")[0];
 const $lottolist= document.getElementsByClassName("lotto-tickets-container")[0];
@@ -17,39 +16,36 @@ const $winninglottos = document.querySelectorAll('.winning input');
 const $bonuswinninglotto = document.querySelector('.bonus input');
 const $resulttable= document.querySelector('.result-table');
 const $profit = document.querySelector('.profit');
+
 $modal.style.display = 'none';
 
 let lottos=[]                   //구입로또리스트
 let winMoneyCount=[0,0,0,0,0];  //당첨갯수리스트
 
 //클릭이벤트
-$purchaseButton.addEventListener("click",(event)=>{
-    event.preventDefault();
-    buyLottoHtmlInsert();
-});
-
+$purchaseButton.addEventListener("click",purchaseEvent);
 $resultbutton.addEventListener("click",resultEvent);
 $modalclosex.addEventListener("click",toggleModal);
 $restartbutton.addEventListener("click",toggleModal);
 
-function resultEvent(event){
+
+
+
+
+
+
+
+
+export function purchaseEvent(event){
+    event.preventDefault();
+    buyLottoHtmlInsert();
+}
+
+export function resultEvent(event){
     event.preventDefault();
     Checkwinning();
     modalHtmlInsert();
     toggleModal();
-}
-
-//무작위 6개 로또번호 생성
-function randomnumber(){
-    const RandomRange=30;   //로또숫자범위
-    const lottoNumbers = [];//중복제거용
-    while(true){
-        const num= Math.floor(Math.random() * RandomRange)
-        if(!lottoNumbers.includes(num)){lottoNumbers.push(num);} 
-        if(lottoNumbers.length==6) break;
-    }
-    lottos.push(lottoNumbers)
-    return lottoNumbers.join(", ");
 }
 
 //로또 구입
@@ -63,6 +59,17 @@ function buyLottoHtmlInsert(){
     }
 }
 
+function randomnumber(){
+    const RandomRange=30;   //로또숫자범위
+    const lottoNumbers = [];//중복제거용
+    while(true){
+        const num= Math.floor(Math.random() * RandomRange)
+        if(!lottoNumbers.includes(num)){lottoNumbers.push(num);} 
+        if(lottoNumbers.length==6) break;
+    }
+    lottos.push(lottoNumbers)
+    return lottoNumbers.join(", ");
+}
 
 //당첨로또 체크
 function Checkwinning(){
