@@ -1,3 +1,11 @@
+import './css/reset.css';
+
+import './css/lotto.css';
+
+import './css/modal.css';
+
+
+
 const $purchaseButton = document.getElementsByClassName("purchase-button")[0];
 const $purchasemoney=document.getElementsByClassName("purchase-money")[0];
 const $lottolist= document.getElementsByClassName("lotto-tickets-container")[0];
@@ -20,15 +28,16 @@ $purchaseButton.addEventListener("click",(event)=>{
     buyLottoHtmlInsert();
 });
 
-$resultbutton.addEventListener("click",(event) =>{
+$resultbutton.addEventListener("click",resultEvent);
+$modalclosex.addEventListener("click",toggleModal);
+$restartbutton.addEventListener("click",toggleModal);
+
+function resultEvent(event){
     event.preventDefault();
     Checkwinning();
     modalHtmlInsert();
     toggleModal();
-});
-$modalclosex.addEventListener("click",toggleModal);
-$restartbutton.addEventListener("click",toggleModal);
-
+}
 
 //무작위 6개 로또번호 생성
 function randomnumber(){
