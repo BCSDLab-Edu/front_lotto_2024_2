@@ -6,6 +6,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
+        <script src="main.js"></script>
         <title>로또</title>
     </head>
     <body>
@@ -17,44 +18,22 @@
                     <div id="main_input_label">구입할 금액을 입력해주세요.</div>
                     <input type="text" id="main_input" placeholder="금액">
                 </div>
-                <button id="main_input_button">구입</button>
+                <button id="main_input_button" onclick="cost_alert()">구입</button>
             </div>
             <div id="middle_text">총 7개를 구매하였습니다.</div>
-            <div id="num_box">
-                <div class="lotto_num_box">
-                    <div class="lotto_icon">🎟️</div><div class="num">12, 28, 22, 37, 19, 23</div>
-                </div>
-                <div class="lotto_num_box">
-                    <div class="lotto_icon">🎟️</div><div class="num">12, 28, 22, 37, 19, 23</div>
-                </div>
-                <div class="lotto_num_box">
-                    <div class="lotto_icon">🎟️</div><div class="num">2, 28, 22, 37, 19, 23</div>
-                </div>
-                <div class="lotto_num_box">
-                    <div class="lotto_icon">🎟️</div><div class="num">12, 28, 22, 37, 19, 23</div>
-                </div>
-                <div class="lotto_num_box">
-                    <div class="lotto_icon">🎟️</div><div class="num">12, 28, 22, 37, 19, 23</div>
-                </div>
-                <div class="lotto_num_box">
-                    <div class="lotto_icon">🎟️</div><div class="num">12, 28, 22, 37, 19, 23</div>
-                </div>
-                <div class="lotto_num_box">
-                    <div class="lotto_icon">🎟️</div><div class="num">12, 28, 22, 37, 19, 23</div>
-                </div>
-            </div>
+            <div id="num_box"></div>
             <div id="lotto_input_box">
                 <div id="lotto_text_1">지난 주 당첨번호 6개와 보너스 번호 1개를 입력해주세요.</div>
                 <div id="lotto_box">
                     <div id="lotto_winning_box">
                         <div id="lotto_winning_text">당첨 번호</div>
                         <div id="lotto_winning_input_box">
-                            <input class="winning_input">
-                            <input class="winning_input">
-                            <input class="winning_input">
-                            <input class="winning_input">
-                            <input class="winning_input">
-                            <input class="winning_input">
+                            <input id="1num" class="winning_input">
+                            <input id="2num" class="winning_input">
+                            <input id="3num" class="winning_input">
+                            <input id="4num" class="winning_input">
+                            <input id="5num" class="winning_input">
+                            <input id="6num" class="winning_input">
                         </div>
                     </div>
                     <div id="lotto_bonus_box">
@@ -63,8 +42,44 @@
                     </div>
                 </div>                
             </div>
-            <button id="result_button">결과 확인하기</button>
+            <button id="result_button" onclick="open_modal()">결과 확인하기</button>
         </div>
         <div id="source">Copyright 2023. woowacourse</div>
+
+        <div id="modal_container" class="hidden">
+            <div id="modal_content">
+                <div id="modal_button_box"><button id="modal_close_button" onclick="close_modal()">X</button></div>
+                <div id="modal_title">🏆 당첨 통계 🏆</div>
+                <div id="modal_lotto_list">
+                    <div class="list_seperator"></div>
+                    <div id="list_title" class="list_content">
+                        <h1 class="list1">일치 갯수</h1><h1 class="list2">당첨금</h1><h1 class="list3">당첨 갯수</h1>
+                    </div>
+                    <div class="list_seperator"></div>
+                    <div class="list_content">
+                        <h1 class="list1">3개</h1><h1 class="list2">5,000</h1><h1 id="ball_3" class="list3">당첨 갯수</h1>
+                    </div>
+                    <div class="list_seperator"></div>
+                    <div class="list_content">
+                        <h1 class="list1">4개</h1><h1 class="list2">50,000</h1><h1 id="ball_4" class="list3">당첨 갯수</h1>
+                    </div>
+                    <div class="list_seperator"></div>
+                    <div class="list_content">
+                        <h1 class="list1">5개</h1><h1 class="list2">1,500,000</h1><h1 id="ball_5" class="list3">당첨 갯수</h1>
+                    </div>
+                    <div class="list_seperator"></div>
+                    <div class="list_content">
+                        <h1 class="list1">5개+보너스볼</h1><h1 class="list2">30,000,000</h1><h1 id="ball_5b" class="list3">당첨 갯수</h1>
+                    </div>
+                    <div class="list_seperator"></div>
+                    <div class="list_content">
+                        <h1 class="list1">6개</h1><h1 class="list2">2,000,000,000</h1><h1 id="ball_6" class="list3">당첨 갯수</h1>
+                    </div>
+                    <div class="list_seperator"></div>
+                </div>
+                <h1 id="lotto_result"></h1>
+                <button id="restart_button" onclick="close_modal()">다시 시작하기</button>
+            </div>
+          </div>
     </body>
 </html>
