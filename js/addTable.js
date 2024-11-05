@@ -5,6 +5,13 @@ const mainContents = document.getElementById('main-contents');
 const amountContext = document.getElementById('amount-context');
 
 export function addTable() {
+    if (!Number.isInteger(Lotto.buy_amount)){
+        alert("1000원 단위로 입력하셔야 합니다.");
+        const moneyAmount = document.getElementById('money-amount');
+        moneyAmount.value = "";
+        return;
+    }
+
     lotteryTable.innerHTML = '';
 
     if (Lotto.buy_amount > 7){

@@ -1,8 +1,11 @@
 import {addNumbers} from "./addNumbers.js";
 import {Lotto} from "./index.js";
 
-export async function prizeRate() {
-    const prize = await addNumbers();
+export function prizeRate() {
+    const prize = addNumbers();
+    if (!prize){
+        return false;
+    }
     const floatingContentMainTable = document.querySelector('.floating-content-main-table');
     const lines = floatingContentMainTable.querySelectorAll('.floating-content-main-line');
 
@@ -18,6 +21,7 @@ export async function prizeRate() {
     for (let i = 0; i < prize.length; i++) {
         moneyProfit += prize[i] * Lotto.profit_list[i];
     }
-    moneyProfit /= Lotto.moneyAmount * 100;
+    moneyProfit /= Lotto.moneyAmount * 0.01;
     floatingContentRate.textContent = `당신의 총 수익률은 ${moneyProfit}%입니다.`;
+    return true;
 }

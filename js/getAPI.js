@@ -1,4 +1,4 @@
-import {Lotto} from "./index.js";
+/* import {Lotto} from "./index.js";
 
 export async function getLottoNumbers(){
     const firstLottoDate = new Date('2002-12-07');
@@ -35,4 +35,4 @@ export async function getLottoNumbers(){
         console.error('로또 번호를 가져오는 중 오류 발생:', error);
         return false;
     }
-}
+}*/

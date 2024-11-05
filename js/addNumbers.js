@@ -1,10 +1,9 @@
-import {getLottoNumbers} from "./getAPI.js";
 import {getNumbers} from "./getNumbers.js";
 
 const lotteryInputs = document.getElementById('lottery_inputs');
 const lotteryNumber = document.getElementById('lottery-number');
 
-export async function addNumbers() {
+export function addNumbers() {
     let numberList = [];
     lotteryInputs.querySelectorAll('#lottery_inputs input').forEach(input => {
         numberList.push(input.value.trim());
@@ -17,14 +16,8 @@ export async function addNumbers() {
         lotteryNumber.innerHTML = `${numberList.join(', ')} + ${bonus_number}`;
         lotteryNumber.style.fontSize = '16px';
     } else {
-        const lottery = await getLottoNumbers();
-
-        const bonusNumberNow = lottery.pop();
-        lottery.sort((a, b) => a - b);
-        numberList = [...lottery];
-        bonus_number = bonusNumberNow;
-        lotteryNumber.innerHTML = `${lottery.join(', ')} + ${bonusNumberNow}`;
-        lotteryNumber.style.fontSize = '16px';
+        alert("모든 입력 칸에 1~45의 정수가 입력되지 않았습니다.");
+        return false;
     }
 
     const countPrize = [0,0,0,0,0];
@@ -62,6 +55,10 @@ export async function addNumbers() {
 function isExist(){
     lotteryInputs.querySelectorAll('#lottery_inputs input').forEach(input => {
         if (input.value === "") {
+            return false;
+        } else if (input.value > 45 || input.value < 1) {
+            return false;
+        } else if (Number.isInteger(input.value)) {
             return false;
         }
     });

@@ -1,5 +1,4 @@
 export const Lotto = {
-    amount: 15,
     length: 6,
     price: 1000,
     profit_list: [5000, 50000, 1500000, 30000000, 2000000000],
@@ -9,6 +8,6 @@ export const Lotto = {
     },
 
     get buy_amount() {
-        return Math.floor(this.moneyAmount / this.price);
+        return this.moneyAmount / this.price;
     }
 };
