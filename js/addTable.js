@@ -5,11 +5,9 @@ const mainContents = document.getElementById('main-contents');
 const amountContext = document.getElementById('amount-context');
 
 export function addTable() {
-    if (Lotto.buy_amount > 15) Lotto.buy_amount = 15;
-
     lotteryTable.innerHTML = '';
 
-    if (Lotto.buy_amount > 6){
+    if (Lotto.buy_amount > 7){
         lotteryTable.style.height = `${Lotto.buy_amount * 40}px`;
         mainContents.style.height = `${451 + Lotto.buy_amount * 40}px`;
     }

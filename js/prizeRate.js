@@ -3,8 +3,6 @@ import {Lotto} from "./index.js";
 
 export async function prizeRate() {
     const prize = await addNumbers();
-    console.log(prize);
-    console.log(Lotto.profit_list);
     const floatingContentMainTable = document.querySelector('.floating-content-main-table');
     const lines = floatingContentMainTable.querySelectorAll('.floating-content-main-line');
 
