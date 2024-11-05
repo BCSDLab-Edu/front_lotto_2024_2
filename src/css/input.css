@@ -1,0 +1,16 @@
+input {
+    height: 36px;
+    padding-right: 6px;
+    padding-left: 6px;
+    border-radius: 4px 4px 4px 4px;  
+    border: 1px solid #B4B4B4;
+}
+
+#input-price {
+    width: 330px;
+}
+
+.input-numbers {
+    width: 24px;
+    margin-right: 4px;
+}
