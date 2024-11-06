@@ -1,31 +1,33 @@
 body {
     margin: 0;
-    position:relative; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
     height: 100vh;
     font-family: 'Roboto';
 }
 
 .rectangle {
     width: 100vw;
-    height: 6.25vh;
+    height: 64px;
     background-color: #4E5BA6;
     border-bottom: 1px solid #4E5BA6;
 }
 
 
-.textbox1 {
+.main-title {
     margin: 0;
-    width: 8.47vw;/*122px*/
-    height: 3.52vh; /*36px*/
+    width: 122px;
+    height: 36px; 
     position: absolute; 
     top: 1.37vh;/*14px*/
     left: 9.03vw;/*130px*/
     gap: 0px;
-    opacity: 1; 
     white-space: nowrap;
 }
 
-.text1 {
+.title-txt {
     font-family: 'Roboto';
     font-size: 1.67vw;/*24px*/
     font-weight: 700;
@@ -36,31 +38,23 @@ body {
 }
 
 .maincontent{
-    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
     width: 414px;
     height: 727px;
-    top: 500px;
-    left: 50%;
     opacity: 0px;
     border-radius: 4px;
-    position: relative;
     background-color: white;
     border: 1px solid rgba(0, 0, 0, 0.2);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);/*그림자 효과*/
-    transform: translate(-50%, -50%);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);/*그림자 효과*/   
 }
 
 .title{
-    position: absolute;
     width: 382px;
-    height: 24px;
-    top: 32px;
-    left: 16px;
-    opacity: 1;
+    height: 24px;;
     text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .titlelotto{
@@ -72,13 +66,18 @@ body {
     align-items: center;
 }
 
+.whole-input{ /*인풋칸과 라벨/ 구입버튼을 가로정렬하기 위해 사용*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-end;
+}
 
 .input-wrapper{
-    width: 310px; /*310px*/
-    height: 64px; /*64px*/
-    position: absolute; 
-    top: 104px; 
-    left: 16px;
+    display: flex;
+    flex-direction: column;
+    width: 310px; 
+    height: 64px; 
 }
 
 label{
@@ -89,8 +88,7 @@ label{
 input{
     margin-top: 7px;
     width: 290px;
-    height: 36px;/*36px*/
-    padding: 0px 3px 3px 3px;/*7px*/
+    height: 36px;
     border-radius: 4px;
 }
 
@@ -99,11 +97,8 @@ input::placeholder{
 }
 
 .buy-button{
-    position: absolute;
-    width: 56px;/*56px*/
-    height: 42px;/*36px*/
-    top: 132px;
-    left: 342px;
+    width: 56px;
+    height: 36px;
     background-color: #4E5BA6;
     color: white;
     font-size: 14px;
@@ -113,18 +108,16 @@ input::placeholder{
     cursor: pointer;
 }
 
-.amountbox{
-    margin-bottom: 3px;
-    position: absolute;
-    top: 180px;
-    left:16px;
-    width: 310px;
-    height: 24px;
+.main-lotto{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .amount{
     margin: 0;
-    font-family: 'Roboto';
+    width: 310px;
+    height: 24px;
     font-size: 15px;
     font-weight: 400;
 }
@@ -134,11 +127,9 @@ input::placeholder{
     display: flex;
     flex-direction: column;
     gap:10px;
-    position: absolute;
+    overflow-y: auto;
     width: 238px;
     height: 276px;
-    top: 228px;
-    left: 16px;
     padding: 0;
 }
 
@@ -155,27 +146,22 @@ input::placeholder{
     flex-direction: center;
     gap: 10px;
 }
+
 .item{
     width: 34px;
     height: 36px;
     object-fit: cover;
 }
 
-.blank{
-    position: absolute;
-    top: 259px;
-    left: 274px;
-    width: 100px;
-    height: 100px;
+.input-num{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .winning-lotto{
-    position: absolute;
-    top: 528px;
-    left: 16px;
     width: 382px;
     height: 104px;
-    border-radius: 4px;
 }
 
 .winning-lotto-title{
@@ -195,7 +181,6 @@ input::placeholder{
 }
 
 .numrectangle-group{
-    margin-top: 5px;
     width: 244px;
     height: 36px;
     display: flex;
@@ -211,9 +196,9 @@ input::placeholder{
 }
 
 .bonusnum{
-    position: absolute;
-    top: 44px;
-    left: 310px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: 76px;
     height: 68px;
     border-radius: 4px;
@@ -221,7 +206,7 @@ input::placeholder{
 }
 
 .bonusnum-title{
-    margin-bottom: 2px;
+    margin: 0;
     font-size: 15px;
     font-family: 'Roboto';
     font-weight: 400;
@@ -229,7 +214,6 @@ input::placeholder{
 
 .bonusnumrectangle{
     margin: 0;
-    margin-left: 40px;
     width: 34px;
     height: 36px;
     border-radius: 4px;
@@ -237,11 +221,8 @@ input::placeholder{
 }
 
 .result{
-    position: absolute;
     width: 382px;
     height: 36px;
-    top: 670px;
-    left: 16px;
     background-color: #4E5BA6;
     color: white;
     font-size: 14px;
@@ -275,7 +256,7 @@ input::placeholder{
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%; 
-    height: 100%; 
+    height: 150vh; 
     background-color: rgba(0, 0, 0, 0.5); 
     z-index: 1000; 
 }
@@ -294,7 +275,6 @@ input::placeholder{
 .pop-title-f{
     display: flex;
     justify-content: center;
-    
     left: 16px;
     font-family: 'Roboto';
     font-size: 20px;
@@ -306,7 +286,6 @@ input::placeholder{
     width: 419px;
     height: 400px;
     position: relative;
-    
     left: 20px;
     gap: 0px;
     opacity: 0px;

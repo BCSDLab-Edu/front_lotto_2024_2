@@ -9,36 +9,39 @@
 </head>
 <body>
     <div class="rectangle"></div>
-    <p class="textbox1"><span class="text1">🎱 000 로또</span></p>
+    <p class="main-title"><span class="title-txt">🎱 000 로또</span></p>
     <div class="maincontent">
-        <p class="title">
+        <div class="title">
             <span class="titlelotto">🎱 내 번호 당첨 확인 🎱</span>
-        </p>
-        <div class="input-wrapper">
-            <label for="money-input">구입할 금액을 입력해주세요.</label>
-            <input type="number" id="money-input" min="0" placeholder="금액" required>
         </div>
-        <button class="buy-button">구입</button>
-        <p class="amountbox"><span class="amount">총 7개를 구매하였습니다.</span></p>
-        <div class="lottonumgroup">
-            
+        <div class="whole-input">
+            <div class="input-wrapper">
+                <label for="money-input">구입할 금액을 입력해주세요.</label>
+                <input type="number" id="money-input" min="0" placeholder="금액" required>
+            </div>
+            <button class="buy-button">구입</button>
         </div>
-        <div class="blank"></div>
+        <div class="main-lotto">
+            <p class="amount">총 0개를 구매하였습니다.</p>
+            <div class="lottonumgroup"></div>
+        </div>
         <div class="winning-lotto">
             <p class="winning-lotto-title">지난 주 당첨번호 6개와 보너스 번호 1개를 입력해주세요.</p>
-            <div class="correctnum"><span class="correctnum-title">당첨 번호</span>
-                <div class="numrectangle-group">
-                    <input class="numrectangle" maxlength="2">
-                    <input class="numrectangle" maxlength="2">
-                    <input class="numrectangle" maxlength="2">
-                    <input class="numrectangle" maxlength="2">
-                    <input class="numrectangle" maxlength="2">
-                    <input class="numrectangle" maxlength="2">
+                <div class="input-num">
+                <div class="correctnum"><span class="correctnum-title">당첨 번호</span>
+                    <div class="numrectangle-group">
+                        <input class="numrectangle" maxlength="2">
+                        <input class="numrectangle" maxlength="2">
+                        <input class="numrectangle" maxlength="2">
+                        <input class="numrectangle" maxlength="2">
+                        <input class="numrectangle" maxlength="2">
+                        <input class="numrectangle" maxlength="2">
+                    </div>
                 </div>
-            </div>
-            <div class="bonusnum"><p class="bonusnum-title">보너스 번호</p>
-                <input class="bonusnumrectangle">
-            </div> 
+                    <div class="bonusnum"><p class="bonusnum-title">보너스 번호</p>
+                        <input class="bonusnumrectangle">
+                    </div>
+                </div>
         </div>
         <button class="result">결과 확인하기</button>
         </div>

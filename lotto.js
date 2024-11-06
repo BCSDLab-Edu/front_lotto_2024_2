@@ -1,6 +1,7 @@
 const btn = document.querySelector('.buy-button'); // 구입 버튼
-let input_money = document.querySelector('#money-input'); // 금액 입력 칸
+const input_money = document.getElementById('money-input'); // 금액 입력 칸
 const lottonumgroup = document.querySelector('.lottonumgroup'); // 로또 번호 그룹
+let amount = document.querySelector('.amount');
 
 function generateLottoNumbers() {
     const numbers = [];
@@ -14,12 +15,9 @@ function generateLottoNumbers() {
 }
 
 btn.addEventListener('click', function() {
-    let lottoAmount = Math.floor(input_money.value / 1000);
-
-    if (lottoAmount > 8) {
-        alert('최대 개수를 초과하였습니다.');
-        return;
-    }
+    let lottoAmount = 0;
+    if (input_money.value % 1000 == 0){//1000원 단위 검증
+        lottoAmount = Math.floor(input_money.value / 1000);
 
     lottonumgroup.innerHTML = '';
 
@@ -41,17 +39,26 @@ btn.addEventListener('click', function() {
     }
 
     alert(lottoAmount + '개를 구매합니다.');
+    amount.innerText = '총' + lottoAmount + '개를 구매하였습니다.';
+    }
+    else{//1000원 단위가 아니면 경고창
+        alert('올바른 숫자를 입력하세요.');
+        input_money.value = null; //금액 초기화
+    }
 });
 
 
 const btn_open = document.querySelector('.result');
 const modal = document.querySelector('.pop-result');
 const btn_close = document.querySelector('.close');
+let lotto_num = document.querySelector('.numrectangle').value;
 
-btn_open.onclick = function() {
-    modal.style.display = "flex"; //버튼 클릭시 모달 띄우기
+
+if (lotto_num != null && lotto_num != 0){//!!!!!!!!!!!!!!여기부터 해야함 numrectangle 타입정하고 조건문 완성!!!!!!
+    btn_open.onclick = function() {
+        modal.style.display = "flex"; //버튼 클릭시 모달 띄우기
+    };
 };
-
 btn_close.onclick = function() { 
     modal.style.display = "none"; //x버튼 클릭시 모달 숨기기
 };
@@ -68,4 +75,5 @@ restart.onclick = function(){
     modal.style.display = "none";
     input_money.value = null;
     lottonumgroup.innerHTML = '';
+    amount.innerText = '총 0개를 구매하였습니다.'
 }
