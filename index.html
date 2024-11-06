@@ -21,7 +21,7 @@
         <span>🎱 내 번호 당첨 확인 🎱</span>
       </div>
       <div class="money">
-        <label class="money_text">구입할 금액을 입력해주세요.</label>
+        <label class="money-text">구입할 금액을 입력해주세요.</label>
         <input type="text" placeholder="금액(최대 개수 15개)" id="money-amount"/>
         <button id="buy-button">구입</button>
       </div>
@@ -63,12 +63,15 @@
           <div class="target_number">
             <p>당첨 번호</p>
             <div class="number_inputs" id="lottery_inputs">
-              <input type="number" />
-              <input type="number" />
-              <input type="number" />
-              <input type="number" />
-              <input type="number" />
-              <input type="number" />
+              <script>
+              const container = document.getElementById("lottery_inputs");
+
+              for (let i = 0; i < 6; i++) {
+                const input = document.createElement("input");
+                input.type = "number";
+                container.appendChild(input);
+              }
+            </script>
             </div>
           </div>
           <div class="bonus_target" id="bonus_target">
