@@ -1,11 +1,14 @@
 import { lottos } from "../PurchaseLotto/lotto";
+import { resultButtonValidation } from "./resultValidation";
 
 
 export function resultEvent(event){
     event.preventDefault();
-    Checkwinning(lottos);
-    modalHtmlInsert(lottos);
-    toggleModal();
+    if(resultButtonValidation($winninglottos,$bonuswinninglotto)){
+        Checkwinning(lottos);
+        modalHtmlInsert(lottos);
+        toggleModal();
+    }
 }
 
 const $winninglottos = document.querySelectorAll('.winning input');

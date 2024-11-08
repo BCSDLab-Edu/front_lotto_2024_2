@@ -1,3 +1,4 @@
+import { LOTTOLENGTH, LOTTORANGE } from "../constants";
 import { purchaseVaildation } from "./purchaseValidation";
 
 export let lottos=[]                   //구입로또리스트
@@ -13,7 +14,7 @@ export function purchaseEvent(event){
 function buyLottoHtmlInsert(){
     lottos=[]
     if(purchaseVaildation($purchasemoney.value)){
-        const boughtCount=Math.floor($purchasemoney.value/1000);
+        const boughtCount=$purchasemoney.value/1000;
         $lottolist.innerHTML = `<span class="lotto-bought-title">총  ${boughtCount}개를 구매하였습니다.</span>`
         for(let count=0;count<boughtCount;count++){
             $lottolist.innerHTML+=
@@ -24,12 +25,11 @@ function buyLottoHtmlInsert(){
 
 
 function randomnumber(){
-    const RandomRange=30;   //로또숫자범위
     const lottoNumbers = [];//중복제거용
     while(true){
-        const num= Math.floor(Math.random() * RandomRange)
+        const num= Math.floor(Math.random() * LOTTORANGE)
         if(!lottoNumbers.includes(num)){lottoNumbers.push(num);} 
-        if(lottoNumbers.length==6) break;
+        if(lottoNumbers.length==LOTTOLENGTH) break;
     }
     lottos.push(lottoNumbers)
     return lottoNumbers.join(", ");
