@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>lotto</title>
+    <link rel="stylesheet" href="../cssfile/main.css" />
+    <link rel="stylesheet" href="../cssfile/modal.css" />
+  </head>
+  <body>
+    <div class="lotto">
+      <div class="lotto__header">
+        <div class="lotto__header--title">🎱 000 로또</div>
+      </div>
+      <div class="lotto__section">
+        <div class="lotto__section--title">🎱 내 번호 당첨 확인 🎱</div>
+        <div class="lotto__section--buy-box">
+          구입할 금액을 입력해주세요.
+          <input class="lotto__section--buy-box-input" type="text" placeholder="금액" />
+          <button class="lotto__section--buy-box-button">구입</button>
+        </div>
+        <div class="lotto__section--ticket-box">
+          <div class="lotto__section--ticket-box-text"></div>
+          <div class="lotto__section--ticket-box-lottobox"></div>
+        </div>
+        <div class="lotto__section--number-title">지난 주 당첨번호 6개와 보너스 번호 1개를 입력해주세요.</div>
+        <div class="lotto__section--number-box">
+          <div class="lotto__section--number-box-win">
+            당첨 번호
+            <div class="lotto__section--number-box-win-items">
+              <input type="text" class="lotto__section--number-box-win-items-input" />
+              <input type="text" class="lotto__section--number-box-win-items-input" />
+              <input type="text" class="lotto__section--number-box-win-items-input" />
+              <input type="text" class="lotto__section--number-box-win-items-input" />
+              <input type="text" class="lotto__section--number-box-win-items-input" />
+              <input type="text" class="lotto__section--number-box-win-items-input" />
+            </div>
+          </div>
+          <div class="lotto__section--number-box-bonus">
+            <div class="lotto__section--number-box-bonus-title">보너스 번호</div>
+            <input type="text" class="lotto__section--number-box-bonus-input" />
+          </div>
+        </div>
+        <button class="lotto__section--button">결과 확인하기</button>
+      </div>
+      <div class="lotto__footer">
+        <div class="lotto__footer--copyright">Copyright 2023. woowacourse</div>
+      </div>
+      <div class="modal">
+        <div class="modal__page">
+          <button class="modal__page--exit">X</button>
+          <div class="modal__page--title">🏆 당첨 통계 🏆</div>
+          <table class="modal__page--table">
+            <thead>
+              <tr>
+                <th>일치 갯수</th>
+                <th>당첨금</th>
+                <th>당첨 갯수</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>3개</td>
+                <td>5,000</td>
+                <td class="modal__page--table-5th">0개</td>
+              </tr>
+              <tr>
+                <td>4개</td>
+                <td>50,000</td>
+                <td class="modal__page--table-4th">0개</td>
+              </tr>
+              <tr>
+                <td>5개</td>
+                <td>1,500,000</td>
+                <td class="modal__page--table-3rd">0개</td>
+              </tr>
+              <tr>
+                <td>5개+보너스볼</td>
+                <td>30,000,000</td>
+                <td class="modal__page--table-2nd">0개</td>
+              </tr>
+              <tr>
+                <td>6개</td>
+                <td>2,000,000,000</td>
+                <td class="modal__page--table-1st">0개</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="modal__page--total">당신의 총 수익률은 %입니다.</div>
+          <button class="modal__page--retry" type="submit">다시 시작하기</button>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/front_lotto/lottoJs/jsfile/const/domMeth.js"></script>
+    <script type="module" src="/front_lotto/lottoJs/jsfile/const/lotto.js"></script>
+    <script type="module" src="/front_lotto/lottoJs/jsfile/func/error.js"></script>
+    <script type="module" src="/front_lotto/lottoJs/jsfile/func/newlotto.js"></script>
+    <script type="module" src="/front_lotto/lottoJs/jsfile/listener/main.js"></script>
+    <script type="module" src="/front_lotto/lottoJs/jsfile/listener/modal.js"></script>
+  </body>
+</html>
