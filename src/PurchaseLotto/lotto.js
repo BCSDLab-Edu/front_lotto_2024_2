@@ -1,3 +1,5 @@
+import { purchaseVaildation } from "./purchaseValidation";
+
 export let lottos=[]                   //구입로또리스트
 const $purchasemoney=document.getElementsByClassName("purchase-money")[0];
 const $lottolist= document.getElementsByClassName("lotto-tickets-container")[0];
@@ -10,11 +12,13 @@ export function purchaseEvent(event){
 //로또 구입
 function buyLottoHtmlInsert(){
     lottos=[]
-    const boughtCount=Math.floor($purchasemoney.value/1000);
-    $lottolist.innerHTML = `<span class="lotto-bought-title">총  ${boughtCount}개를 구매하였습니다.</span>`
-    for(let count=0;count<boughtCount;count++){
-        $lottolist.innerHTML+=
-        `<div>🎟️ ${randomnumber()}</div>`
+    if(purchaseVaildation($purchasemoney.value)){
+        const boughtCount=Math.floor($purchasemoney.value/1000);
+        $lottolist.innerHTML = `<span class="lotto-bought-title">총  ${boughtCount}개를 구매하였습니다.</span>`
+        for(let count=0;count<boughtCount;count++){
+            $lottolist.innerHTML+=
+            `<div>🎟️ ${randomnumber()}</div>`
+        }
     }
 }
 

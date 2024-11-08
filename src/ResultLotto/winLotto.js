@@ -1,4 +1,4 @@
-import { lottos } from "./lotto";
+import { lottos } from "../PurchaseLotto/lotto";
 
 
 export function resultEvent(event){
