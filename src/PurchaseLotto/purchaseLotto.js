@@ -1,4 +1,4 @@
-import { LOTTOLENGTH, LOTTORANGE } from "../constants";
+import { LOTTOLENGTH, LOTTOPRICE, LOTTORANGE } from "../constants";
 import { purchaseVaildation } from "./purchaseValidation";
 
 export let lottos=[]                   //구입로또리스트
@@ -14,7 +14,7 @@ export function purchaseEvent(event){
 function buyLottoHtmlInsert(){
     lottos=[]
     if(purchaseVaildation($purchasemoney.value)){
-        const boughtCount=$purchasemoney.value/1000;
+        const boughtCount=$purchasemoney.value/LOTTOPRICE;
         $lottolist.innerHTML = `<span class="lotto-bought-title">총  ${boughtCount}개를 구매하였습니다.</span>`
         for(let count=0;count<boughtCount;count++){
             $lottolist.innerHTML+=

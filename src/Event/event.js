@@ -1,5 +1,5 @@
-import { purchaseEvent } from '../PurchaseLotto/lotto';
-import { resultEvent, toggleModal } from '../ResultLotto/winLotto';
+import { purchaseEvent } from '../PurchaseLotto/purchaseLotto';
+import { resultEvent, toggleModal } from '../ResultLotto/resultLotto';
 
 
 const $purchaseButton = document.getElementsByClassName("purchase-button")[0];

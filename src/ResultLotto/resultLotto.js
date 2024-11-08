@@ -1,4 +1,5 @@
-import { lottos } from "../PurchaseLotto/lotto";
+import { LOTTOPRICE, WINMONEY } from "../constants";
+import { lottos } from "../PurchaseLotto/purchaseLotto";
 import { resultButtonValidation } from "./resultValidation";
 
 
@@ -44,7 +45,6 @@ function Checkwinning(lottos){
 
 //모달 작성
 function modalHtmlInsert(lottos){
-    const winMoney=[5000,50000,1500000,30000000,2000000000]
     const winCount=["3개","4개","5개","5개+보너스볼","6개"]
     $resulttable.innerHTML=`
     <tr>
@@ -58,13 +58,13 @@ function modalHtmlInsert(lottos){
         $resulttable.innerHTML+=`
         <tr>
             <td>${winCount[i]}</td>
-            <td>${winMoney[i]}</td>
+            <td>${WINMONEY[i]}</td>
             <td>${winMoneyCount[i]}개</td>
         </tr>
         `
-        profit+=winMoney[i]*winMoneyCount[i];
+        profit+=WINMONEY[i]*winMoneyCount[i];
     }
-    $profit.textContent=`당신의 총 수익률은 ${((profit-(lottos.length*1000))/(lottos.length*1000)*100).toFixed(2)}%입니다.`
+    $profit.textContent=`당신의 총 수익률은 ${((profit-(lottos.length*LOTTOPRICE))/(lottos.length*LOTTOPRICE)*100).toFixed(2)}%입니다.`
 }
 
 //모달 ON/OFF
