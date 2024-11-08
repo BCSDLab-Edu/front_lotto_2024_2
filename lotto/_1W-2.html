@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="_1W-2.css" />
+  </head>
+  <body>
+    <div id="container">
+      <header id="header">
+        <p id="title">🎱 000 로또</p>
+      </header>
+      <section id="section">
+        <div id="section-flex">
+          <div id="main-title">🎱 내 번호 당첨 확인 🎱</div>
+          <div id="buy-box">
+            구입할 금액을 입력해주세요.
+            <input id="buy" type="text" placeholder="금액" />
+            <button id="buy-button">구입</button>
+          </div>
+          <p id="num">총 7개를 구매하였습니다.</p>
+          <div id="lotto-box">
+            <span class="lotto"
+              ><span class="img">🎟️</span>12, 18, 22, 37, 19, 23</span
+            >
+            <span class="lotto"
+              ><span class="img">🎟️</span>12, 18, 22, 37, 19, 23</span
+            >
+            <span class="lotto"
+              ><span class="img">🎟️</span>12, 18, 22, 37, 19, 23</span
+            >
+            <span class="lotto"
+              ><span class="img">🎟️</span>12, 18, 22, 37, 19, 23</span
+            >
+            <span class="lotto"
+              ><span class="img">🎟️</span>12, 18, 22, 37, 19, 23</span
+            >
+            <span class="lotto"
+              ><span class="img">🎟️</span>12, 18, 22, 37, 19, 23</span
+            >
+            <span class="lotto"
+              ><span class="img">🎟️</span>12, 18, 22, 37, 19, 23</span
+            >
+          </div>
+          <div id="input-num">
+            지난 주 당첨번호 6개와 보너스 번호 1개를 입력해주세요.
+            <form action="local.txt" id="form">
+              <div>
+                당첨번호<span id="form-layout-win">
+                  <input type="text" class="all-num" maxlength="1" />
+                  <input type="text" class="all-num" maxlength="1" />
+                  <input type="text" class="all-num" maxlength="1" />
+                  <input type="text" class="all-num" maxlength="1" />
+                  <input type="text" class="all-num" maxlength="1" />
+                  <input type="text" class="all-num" maxlength="1" />
+                </span>
+              </div>
+              <div id="form-layout-bonus">
+                <span id="bonus-text">보너스번호</span>
+                <span>
+                  <input type="text" id="bonus-num" maxlength="1" />
+                </span>
+              </div>
+            </form>
+          </div>
+          <button id="result-button">결과 확인하기</button>
+        </div>
+      </section>
+      <footer id="footer">
+        <p id="copyright">Copyright 2023. woowacourse</p>
+      </footer>
+    </div>
+  </body>
+</html>

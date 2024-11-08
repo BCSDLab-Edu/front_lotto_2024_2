@@ -1,0 +1,230 @@
+html,
+body {
+  height: 97%;
+  margin: 0;
+}
+
+.font-style {
+  font-family: Roboto;
+}
+
+#header {
+  position: fixed;
+  width: 100%;
+  height: 6%;
+  top: 0;
+  border: 1px solid #0000001f;
+  background-color: #4e5ba6;
+}
+
+#title {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  width: 152px;
+  height: 36px;
+  top: 6px;
+  left: 130px;
+  font-weight: bolder;
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 36px;
+  text-align: left;
+}
+
+#section {
+  position: relative;
+  width: 414px;
+  height: 76%;
+  top: 38px;
+  left: 550px;
+  margin-top: 4%;
+  border: 1px solid #0000001f;
+}
+
+#main-title {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 22px;
+  top: 4.5%;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 24px;
+  justify-content: center;
+  font-weight: bolder;
+}
+
+.ball {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+  margin-left: 8px;
+  margin-top: 3px;
+}
+
+#buy-box {
+  position: absolute;
+  height: 8%;
+  width: 100%;
+  top: 12%;
+  box-sizing: border-box;
+  padding-left: 3%;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  text-align: left;
+}
+
+#pay {
+  border-radius: 4px;
+  padding: 5px;
+  border: 1px solid #ccc;
+}
+
+#buy-button {
+  margin-left: 2%;
+  background-color: #4e5ba6;
+  color: white;
+  border-radius: 4px;
+  border: 1px solid #4e5ba6;
+  padding: 4px 10px 4px 10px;
+}
+
+#num {
+  position: absolute;
+  top: 24%;
+  box-sizing: border-box;
+  padding-left: 3%;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  text-align: left;
+}
+
+.ticket {
+  display: flex;
+}
+
+.ticket-img {
+  width: 24px;
+  height: 24px;
+  margin-bottom: 11px;
+}
+
+.ticket-num {
+  margin-left: 2%;
+}
+
+#lotto {
+  position: absolute;
+  height: 43%;
+  width: 100%;
+  top: 29%;
+  box-sizing: border-box;
+  padding-left: 3%;
+}
+
+#input-box {
+  position: absolute;
+  display: flex;
+  top: 70%;
+  width: 100%;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  text-align: left;
+  padding-left: 3%;
+}
+
+#win-num {
+  position: absolute;
+  top: 150%; /*바로 직전 상위 요소가 ab이거나 rel일 때 그 요소 크기를 기준으로 한다. 여기서는 input_box크기의 180%내려가는 코드 */
+  width: 60%;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  text-align: left;
+}
+
+#win-num-pack {
+  display: flex;
+  margin-top: 2%;
+}
+
+#bonus-num {
+  position: absolute;
+  top: 150%;
+  width: 30%;
+  left: 60%;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  text-align: right;
+  padding-left: 1.5%;
+}
+
+#bonus-num-pack {
+  margin-top: 3.5%;
+}
+
+.rect {
+  width: 7%;
+  margin-left: 4%;
+  border-radius: 4px;
+  padding: 5px;
+  border: 1px solid #ccc;
+}
+
+#rect-first {
+  margin-left: 0%;
+}
+
+#right {
+  width: 14%;
+}
+
+#result-button {
+  position: absolute;
+  display: flex;
+  text-align: center;
+  top: 89%;
+  width: 90%;
+  background-color: #4e5ba6;
+  color: white;
+  border-radius: 4px;
+  border: 1px solid #4e5ba6;
+  padding: 4px 15px 4px 15px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 25px;
+  letter-spacing: 1.25px;
+  justify-content: center;
+  margin-left: 5%;
+}
+
+#footer {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 6%;
+  top: 742px;
+  border: 1px solid #4e5ba633;
+}
+
+#copyright {
+  color: #4e5ba6;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 1.25px;
+}
