@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <!--헤더-->
+    <header>
+        <span class="title">🎱 박종범 로또</span>
+    </header>
+
+    <!--메인-->
+    <main class="main-contents">
+        <span class="subtitle">🎱 내 번호 당첨 확인 🎱</span>
+        <!--구매금액-->
+        <form class="purchase-form">
+            <span>구입할 금액을 입력해주세요.</span>
+            <div>
+                <input class="purchase-money" type="text" placeholder="금액" id="money" name="money">
+                <button class="caption purchase-button" type="submit">구입</button>
+            </div>
+        </form>
+
+        <!--로또란-->
+        <div class="lotto-tickets-container">
+        </div>
+        
+        <!--당첨로또번호입력-->
+        <form class="winning-lotto-form">
+            <span>지난 주 당첨번호 6개와 보너스 번호 1개를 입력해주세요.</span>
+            <div class="number-input-container">
+                <div class="winning">
+                    <span>당첨 번호</span>
+                    <div>
+                        <input type="number">
+                        <input type="number">
+                        <input type="number">
+                        <input type="number">
+                        <input type="number">
+                        <input type="number">
+                    </div>
+                </div>
+                <div class="bonus">
+                    <span>보너스 번호</span>
+                    <input type="number">
+                </div>
+            </div>
+            <button class="result caption" type="submit">결과 확인하기</button>
+        </form>
+    </main>
+
+    <!--푸터-->
+    <footer>
+        <span class="caption">Copyright 2023. woowacourse</span>
+    </footer>
+
+
+    <!--모달-->
+    <div class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-content-box">
+            <div class="modal-close-x">X</div>
+            <span class="modal-title subtitle">🏆당첨통계🏆</span>
+            <table class="result-table">
+            </table>
+            <span class="profit">당신의 총 수익률은 %입니다.</span>
+            <button class="restart caption" type="submit">다시 시작하기</button>
+        </div>
+    </div>
+
+</body>
+    <script  type="module" src="./src/main.js"></script>
+</html>
