@@ -13,11 +13,6 @@ export function addTable() {
     }
 
     lotteryTable.innerHTML = '';
-
-    if (Lotto.buy_amount > 7){
-        lotteryTable.style.height = `${Lotto.buy_amount * 40}px`;
-        mainContents.style.height = `${451 + Lotto.buy_amount * 40}px`;
-    }
     
     function addLotteryList(){  // 로또 랜덤 생성 함수
         const li = document.createElement("li");

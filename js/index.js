@@ -1,7 +1,7 @@
 export const Lotto = {
     length: 6,
     price: 1000,
-    profit_list: [5000, 50000, 1500000, 30000000, 2000000000],
+    profit_list: [5_000, 50_000, 1_500_000, 30_000_000, 2_000_000_000],
 
     get moneyAmount() {
         return parseInt(document.getElementById('money-amount').value,10);
