@@ -1,0 +1,411 @@
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+    font-family: 'Roboto';
+}
+
+.rectangle {
+    width: 100vw;
+    height: 64px;
+    background-color: #4E5BA6;
+    border-bottom: 1px solid #4E5BA6;
+}
+
+
+.main-title {
+    margin: 0;
+    width: 122px;
+    height: 36px; 
+    position: absolute; 
+    top: 1.37vh;/*14px*/
+    left: 9.03vw;/*130px*/
+    gap: 0px;
+    white-space: nowrap;
+}
+
+.title-txt {
+    font-family: 'Roboto';
+    font-size: 1.67vw;/*24px*/
+    font-weight: 700;
+    line-height: 3.52vh;/*36px*/
+    text-align: left;
+    color: white; 
+    margin: 0;
+}
+
+.maincontent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 414px;
+    height: 727px;
+    opacity: 0px;
+    border-radius: 4px;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);/*그림자 효과*/   
+}
+
+.title{
+    width: 382px;
+    height: 24px;;
+    text-align: center;
+}
+
+.titlelotto{
+    margin: 0;
+    font-family: 'Roboto';
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    align-items: center;
+}
+
+.whole-input{ /*인풋칸과 라벨/ 구입버튼을 가로정렬하기 위해 사용*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+.input-wrapper{
+    display: flex;
+    flex-direction: column;
+    width: 310px; 
+    height: 64px; 
+}
+
+label{
+    font-size: 15px; 
+    font-family: 'Roboto';
+}
+
+input{
+    margin-top: 7px;
+    width: 290px;
+    height: 36px;
+    border-radius: 4px;
+}
+
+input::placeholder{
+    font-size: 14px;
+}
+
+.buy-button{
+    width: 56px;
+    height: 36px;
+    background-color: #4E5BA6;
+    color: white;
+    font-size: 14px;
+    font-family: 'Roboto';
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.main-lotto{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.amount{
+    margin: 0;
+    width: 310px;
+    height: 24px;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.lottonumgroup{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    overflow-y: auto;
+    width: 238px;
+    height: 276px;
+    padding: 0;
+}
+
+.num{
+    list-style: none;
+    margin-top: 5px;
+    font-family: 'Roboto';
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.image{
+    display: flex;
+    flex-direction: center;
+    gap: 10px;
+}
+
+.item{
+    width: 34px;
+    height: 36px;
+    object-fit: cover;
+}
+
+.input-num{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.winning-lotto{
+    width: 382px;
+    height: 104px;
+}
+
+.winning-lotto-title{
+    margin-top: 20px;
+    font-family: 'Roboto';
+    font-size: 15px;
+    font-weight: 400;
+    color: #000000;
+    white-space: nowrap;
+}
+
+.correctnum-title{
+    font-family: 'Roboto';
+    font-size: 15px;
+    font-weight: 400;
+    color: #000000;
+}
+
+.numrectangle-group{
+    width: 244px;
+    height: 36px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.numrectangle{
+    width: 34px;
+    height: 36px;
+    border-radius: 4px;
+    border: 1px solid #b4b4b4;
+}
+
+.bonusnum{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 76px;
+    height: 68px;
+    border-radius: 4px;
+    white-space: nowrap;
+}
+
+.bonusnum-title{
+    margin: 0;
+    font-size: 15px;
+    font-family: 'Roboto';
+    font-weight: 400;
+}
+
+.bonusnumrectangle{
+    margin: 0;
+    width: 34px;
+    height: 36px;
+    border-radius: 4px;
+    border: 1px solid #b4b4b4;
+}
+
+.result{
+    width: 382px;
+    height: 36px;
+    background-color: #4E5BA6;
+    color: white;
+    font-size: 14px;
+    font-family: 'Roboto';
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.copyright{
+    position: relative;/*fixed랑 둘중에 고민*/
+    top: 200px;
+    width: 100vw;
+    height: 80px;
+    border-top: 1px solid #4E5BA6;
+    display: flex;
+    font-size: 14px;
+    font-family: 'Roboto';
+    font-weight: 700;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.pop-result{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%; 
+    height: 150vh; 
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 1000; 
+}
+
+.pop-inner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    height: 550px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.pop-title-f{
+    display: flex;
+    justify-content: center;
+    left: 16px;
+    font-family: 'Roboto';
+    font-size: 20px;
+}
+
+.pop-winning-result{
+    display: flex;
+    justify-content: center;
+    width: 419px;
+    height: 400px;
+    position: relative;
+    left: 20px;
+    gap: 0px;
+    opacity: 0px;
+    flex-direction: column;
+}
+
+.pop-winning-type-group{
+    display: flex;
+    justify-content: space-around;
+    width: 380px;
+    height: 50px;
+    border-top: rgb(0,0,0) 1px solid;
+}
+
+.pop-winning-3{
+    display: flex;
+    justify-content: space-around;
+    width: 380px;
+    height: 50px;
+    border-top: rgb(0,0,0) 1px solid;
+}
+
+.pop-winning-4{
+    display: flex;
+    justify-content: space-around;
+    width: 380px;
+    height: 50px;
+    border-top: rgb(0,0,0) 1px solid;
+}
+
+.pop-winning-5{
+    display: flex;
+    justify-content: space-around;
+    width: 380px;
+    height: 50px;
+    border-top: rgb(0,0,0) 1px solid;
+}
+
+.pop-winning-5b{
+    display: flex;
+    justify-content: space-around;
+    width: 380px;
+    height: 50px;
+    border-top: rgb(0,0,0) 1px solid;
+}
+
+.pop-winning-6{
+    display: flex;
+    justify-content: space-around;
+    width: 380px;
+    height: 50px;
+    border-top: rgb(0,0,0) 1px solid;
+}
+
+.num-type{
+    width: 100px;
+    display: flex;
+    font-family: 'Roboto';
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    text-align: center;
+    margin-top: 10px;
+    justify-content: center;
+}
+
+.winning-money{
+    width: 100px;
+    display: flex;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    text-align: center;
+    margin-top: 10px;
+    justify-content: center;
+}
+
+.winning-count{
+    width: 100px;
+    display: flex;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    text-align: center;
+    margin-top: 10px;
+    justify-content: center;
+}
+
+.profit{
+    display: flex;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.restart{
+    width: 382px;
+    height: 36px;
+    background-color: #4E5BA6;
+    color: white;
+    font-size: 14px;
+    font-family: 'Roboto';
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+}
+
+.close{
+    position: relative;
+    left: 200px;
+    top: -30px;
+}
+
