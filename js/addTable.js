@@ -1,7 +1,6 @@
 import {Lotto} from "./index.js";
 
 const lotteryTable = document.getElementById("lottery-table");
-const mainContents = document.getElementById('main-contents');
 const amountContext = document.getElementById('amount-context');
 
 export function addTable() {
@@ -35,6 +34,8 @@ export function addTable() {
                 overlapList.add(num);
             }
         }
+
+        lotteryList.sort((a, b) => a - b);
 
         p.textContent = lotteryList.join(", ");
 
