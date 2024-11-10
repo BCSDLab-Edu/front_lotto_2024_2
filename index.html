@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lotto</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <p class="header_text">🎱행운의 로또</p>
+    </header>
+    <div class="main-contents" id="main-contents">
+      <div class="title">
+        <span>🎱 내 번호 당첨 확인 🎱</span>
+      </div>
+      <div class="money">
+        <label class="money-text">구입할 금액을 입력해주세요.</label>
+        <input type="text" placeholder="금액(최대 개수 15개)" id="money-amount"/>
+        <button id="buy-button">구입</button>
+      </div>
+      <div class="context" id="amount-context">
+        <p>총 7개를 구매하였습니다.</p>
+      </div>
+      <ul class="lottery" id="lottery-table">
+        <li class="container">
+          <span>🎟️</span>
+          <p>12, 28, 22, 37, 19, 23</p>
+        <li class="container">
+          <span>🎟️</span>
+          <p>12, 28, 22, 37, 19, 23</p>
+        </li>
+        <li class="container">
+          <span>🎟️</span>
+          <p>2, 28, 22, 37, 19, 23</p>
+        </li>
+        <li class="container">
+          <span>🎟️</span>
+          <p>12, 28, 22, 37, 19, 23</p>
+        </li>
+        <li class="container">
+          <span>🎟️</span>
+          <p>12, 28, 22, 37, 19, 23</p>
+        </li>
+        <li class="container">
+          <span>🎟️</span>
+          <p>12, 28, 22, 37, 19, 23</p>
+        </li>
+        <li class="container">
+          <span>🎟️</span>
+          <p>12, 28, 22, 37, 19, 23</p>
+        </li>
+      </ul>
+      <div class="target">
+        <p>지난 주 당첨번호 6개와 보너스 번호 1개를 입력해주세요.</p>
+        <div class="inputs">
+          <div class="target_number">
+            <p>당첨 번호</p>
+            <div class="number_inputs" id="lottery_inputs">
+              <script>
+              const container = document.getElementById("lottery_inputs");
+
+              for (let i = 0; i < 6; i++) {
+                const input = document.createElement("input");
+                input.type = "number";
+                container.appendChild(input);
+              }
+            </script>
+            </div>
+          </div>
+          <div class="bonus_target" id="bonus_target">
+            <p>보너스 번호</p>
+            <input type="number" />
+          </div>
+        </div>
+      </div>
+      <button class="check" id="checkResult">결과 확인하기</button>
+    </div>
+    <footer class="copyright">
+      <p>Copyright 2024. DongAncourse</p>
+    </footer>
+    <div class="floating-content" id="floating-content">
+      <div class="floating-content-close-container">
+        <span id="close-floating-content" class="floating-content-close">&times;</span>
+      </div>
+      <div class="floating-content-title">
+        <span>🏆 당첨 통계 🏆</span>
+      </div>
+      <div class="floating-content-main">
+        <div class="floating-content-lottery-number">
+          <p>당첨 번호</p>
+          <span id="lottery-number">로딩중입니다</span>
+        </div>
+        <ul class="floating-content-main-table">
+          <li class="floating-content-main-line first-line">
+            <span class="floating-content-main-text1">일치 갯수</span>
+            <span class="floating-content-main-text2">당첨금</span>
+            <span class="floating-content-main-text3">당첨 갯수</span>
+          </li>
+          <li class="floating-content-main-line">
+            <span class="floating-content-main-text1">3개</span>
+            <span class="floating-content-main-text2">5,000</span>
+            <span class="floating-content-main-text3"></span>
+          </li>
+          <li class="floating-content-main-line">
+            <span class="floating-content-main-text1">4개</span>
+            <span class="floating-content-main-text2">50,000</span>
+            <span class="floating-content-main-text3"></span>
+          </li>
+          <li class="floating-content-main-line">
+            <span class="floating-content-main-text1">5개</span>
+            <span class="floating-content-main-text2">1,500,000</span>
+            <span class="floating-content-main-text3"></span>
+          </li>
+          <li class="floating-content-main-line">
+            <span class="floating-content-main-text1">5개+보너스볼</span>
+            <span class="floating-content-main-text2">30,000,000</span>
+            <span class="floating-content-main-text3"></span>
+          </li>
+          <li class="floating-content-main-line">
+            <span class="floating-content-main-text1">6개</span>
+            <span class="floating-content-main-text2">2,000,000,000</span>
+            <span class="floating-content-main-text3"></span>
+          </li>
+        </ul>
+      </div>
+      <div class="floating-content-rate">
+        <span>당신의 총 수익률은 %입니다.</span>
+      </div>
+      <button class="floating-content-button" id="restart">다시 시작하기</button>
+    </div>
+    <div class="popup-background" id="popup-background"></div>
+    <script type="module" src="./js/script.js"></script>
+  </body>
+</html>
