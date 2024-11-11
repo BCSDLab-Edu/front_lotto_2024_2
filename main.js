@@ -33,7 +33,13 @@ function random_lotto_generation(lotto_numbers) {
                 }
             }
         }
-        
+
+        now_lotto_arr[i].sort(function(a, b)  {
+            if(a > b) return 1;
+            if(a === b) return 0;
+            if(a < b) return -1;
+        });
+
         const new_lotto_num_Box = document.createElement("div");
         new_lotto_num_Box.classList.add("lotto_num_box");
 
@@ -49,6 +55,8 @@ function random_lotto_generation(lotto_numbers) {
 
         now_num_box.appendChild(new_lotto_num_Box);
     }
+
+    document.getElementById("middle_text").innerHTML = "총 " +lotto_numbers + "개의 복권을 구매하였습니다.";
 }
 
 function open_modal() {
@@ -73,6 +81,19 @@ function open_modal() {
             alert("당첨 번호를 입력해 주세요.")
             return;
         }
+        if (winning_number[i] > 45 || winning_number[i] < 1) {
+            alert("당첨 번호는 1 ~ 45 사이의 숫자이어야 합니다.")
+            return;
+        }
+    }
+
+    if (bonus_number == 0) {
+        alert("당첨 번호를 입력해 주세요.")
+        return;
+    }
+    if (bonus_number > 45 || bonus_number < 1) {
+        alert("당첨 번호는 1 ~ 45 사이의 숫자이어야 합니다.")
+        return;
     }
 
     var ball_3_num = 0;
@@ -120,7 +141,7 @@ function open_modal() {
     if (final_profit < Number(now_cost.value)) {
         document.getElementById("lotto_result").innerHTML = "당신의 총 수익률은 0%입니다.";
     } else {
-            document.getElementById("lotto_result").innerHTML = "당신의 총 수익률은 " + Number(Math.floor(((final_profit - Number(now_cost.value)) / Number(now_cost.value)) * 100)) + "%입니다.";
+            document.getElementById("lotto_result").innerHTML = "당신의 총 수익률은 " + Math.floor((final_profit / Number(now_cost.value)) * 100) + "%입니다.";
     }
 
     modal.classList.remove("hidden");
