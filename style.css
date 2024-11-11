@@ -93,6 +93,7 @@ main section{
 }
 #numbers div{
   justify-content: space-between;
+  margin-right: 16px;
 }
 #numbers p{
   display: inline-block;
