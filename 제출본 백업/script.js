@@ -13,7 +13,7 @@ submit1El.addEventListener("click", () => {
     if (valPrice % 1000 === 0) { // 검사한다
         let numRandoms = valPrice / 1000;
         totalNumRandoms += numRandoms;
-        const randomsEl = document.querySelector("#randoms > div");
+        const randomsEl = document.querySelector("#randoms");
         
         for (let i = 0; i < numRandoms; i++) {
             let str = "🎟️ ";

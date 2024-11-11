@@ -48,11 +48,8 @@ h2{
 main section{
   margin-left: 16px;
 }
-#purchase p{
-  margin-top: 26px;
-}
 #purchase div{
-  margin-top: 8px;
+  margin-top: 28px;
 
 }
 #purchase div input{
@@ -76,20 +73,6 @@ main section{
 
   border: 1px solid #4E5BA6;
   border-radius: 3px;
-}
-#randoms{
-  width: 100%;
-  margin-left: 16px;
-  margin-right: 16px;
-  height: 300px;
-}
-#randoms div{
-  overflow-y: scroll;
-  height: 88%;
-  width: 92%;
-}
-#numbers{
-  align-items: flex-end;
 }
 #numbers div{
   justify-content: space-between;
@@ -139,8 +122,6 @@ main section{
   margin-right: 16px;
 }
 #submit2{
-  align-items: flex-end;
-
   width: 380px;
   height: 36px;
 
