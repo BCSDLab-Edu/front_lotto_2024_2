@@ -1,0 +1,8 @@
+export const LOTTO = {
+    MIN: 1,
+    MAX: 45,
+    LENGTH: 6,
+    BONUS_INDEX: 6,
+    PRICE: 1000,
+    PRIZES: [5000, 50000, 1500000, 30000000, 2000000000],
+}
