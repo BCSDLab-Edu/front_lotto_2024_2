@@ -126,16 +126,11 @@ td {
 }
 
 #modal {
-    display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: fixed;
-    top: 50%;
-    left: 50%;
     width: 350px;
     height: 500px;
-    transform: translate(-50%, -50%);
     padding: 16px 16px 16px 16px;
     background-color: white;
     border-radius: 4px;
@@ -147,6 +142,7 @@ td {
     font-weight: bold;
     margin-top: 20px;
     margin-bottom: 40px;
+    text-align: center;
 }
 
 #modal-background {
