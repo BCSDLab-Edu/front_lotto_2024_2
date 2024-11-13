@@ -49,19 +49,29 @@ function randomGenerator(){
 // 당첨번호, 보너스 번호를 입력 > 결과 확인버튼 누름
 // if 빈칸 존재, alert 띄움
 // else if 1~45 밖의 값, alert 띄움
-const ans1El = document.querySelector("#answer-numbers div:nth-child(1) input");
-const ans2El = document.querySelector("#answer-numbers div:nth-child(2) input");
-const ans3El = document.querySelector("#answer-numbers div:nth-child(3) input");
-const ans4El = document.querySelector("#answer-numbers div:nth-child(4) input");
-const ans5El = document.querySelector("#answer-numbers div:nth-child(5) input");
-const ans6El = document.querySelector("#answer-numbers div:nth-child(6) input");
+/*
+const ans1El = document.querySelector("#answer-numbers div input:nth-child(1)");
+const ans2El = document.querySelector("#answer-numbers div input:nth-child(2)");
+const ans3El = document.querySelector("#answer-numbers div input:nth-child(3)");
+const ans4El = document.querySelector("#answer-numbers div input:nth-child(4)");
+const ans5El = document.querySelector("#answer-numbers div input:nth-child(5)");
+const ans6El = document.querySelector("#answer-numbers div input:nth-child(6)");
 const bnsEl = document.querySelector("#answer-numbers input");
 const submit2El = document.querySelector("#submit2");
-
+*/
 let result = { 1:0, 2:0, 3:0, 4:0, 5:0 };
 let score = { 1:2000000000, 2:30000000, 3:1500000, 4:50000, 5:5000 };
 
 submit2El.addEventListener("click", () => {
+    const ans1El = document.querySelector("#answer-numbers div input:nth-child(1)");
+    const ans2El = document.querySelector("#answer-numbers div input:nth-child(2)");
+    const ans3El = document.querySelector("#answer-numbers div input:nth-child(3)");
+    const ans4El = document.querySelector("#answer-numbers div input:nth-child(4)");
+    const ans5El = document.querySelector("#answer-numbers div input:nth-child(5)");
+    const ans6El = document.querySelector("#answer-numbers div input:nth-child(6)");
+    const bnsEl = document.querySelector("#answer-numbers input");
+    const submit2El = document.querySelector("#submit2");
+
     let val1 = parseInt(ans1El.value);
     let val2 = parseInt(ans2El.value);
     let val3 = parseInt(ans3El.value);
